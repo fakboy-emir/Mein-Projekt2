@@ -49,11 +49,11 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.Hubbtn = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.Jahrcombo = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SaveBtn = new System.Windows.Forms.Button();
-            this.Jahrcombo = new System.Windows.Forms.ComboBox();
             this.PkwMarkenCombo = new System.Windows.Forms.ComboBox();
             this.LKWMarkenCombo = new System.Windows.Forms.ComboBox();
             this.MotoMarkenCombo = new System.Windows.Forms.ComboBox();
@@ -98,7 +98,7 @@
             this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.textBox6, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox7, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Hubbtn, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.textBox8, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.Jahrcombo, 1, 4);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Black;
@@ -289,12 +289,12 @@
             this.textBox6.Size = new System.Drawing.Size(161, 22);
             this.textBox6.TabIndex = 8;
             // 
-            // textBox7
+            // Hubbtn
             // 
-            this.textBox7.Location = new System.Drawing.Point(253, 373);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(121, 22);
-            this.textBox7.TabIndex = 9;
+            this.Hubbtn.Location = new System.Drawing.Point(253, 373);
+            this.Hubbtn.Name = "Hubbtn";
+            this.Hubbtn.Size = new System.Drawing.Size(121, 22);
+            this.Hubbtn.TabIndex = 9;
             // 
             // textBox8
             // 
@@ -302,16 +302,6 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(121, 22);
             this.textBox8.TabIndex = 10;
-            // 
-            // SaveBtn
-            // 
-            this.SaveBtn.Location = new System.Drawing.Point(624, 479);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(129, 35);
-            this.SaveBtn.TabIndex = 1;
-            this.SaveBtn.Text = "Save";
-            this.SaveBtn.UseVisualStyleBackColor = true;
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // Jahrcombo
             // 
@@ -351,6 +341,16 @@
             this.Jahrcombo.Name = "Jahrcombo";
             this.Jahrcombo.Size = new System.Drawing.Size(121, 24);
             this.Jahrcombo.TabIndex = 11;
+            // 
+            // SaveBtn
+            // 
+            this.SaveBtn.Location = new System.Drawing.Point(624, 479);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(129, 35);
+            this.SaveBtn.TabIndex = 1;
+            this.SaveBtn.Text = "Save";
+            this.SaveBtn.UseVisualStyleBackColor = true;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // PkwMarkenCombo
             // 
@@ -420,6 +420,7 @@
             this.MotoMarkenCombo.Name = "MotoMarkenCombo";
             this.MotoMarkenCombo.Size = new System.Drawing.Size(121, 24);
             this.MotoMarkenCombo.TabIndex = 4;
+            this.MotoMarkenCombo.SelectedIndexChanged += new System.EventHandler(this.MotoMarkenCombo_SelectedIndexChanged);
             // 
             // AddCar
             // 
@@ -463,7 +464,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox Hubbtn;
         private System.Windows.Forms.TextBox textBox8;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button SaveBtn;

@@ -28,7 +28,7 @@ namespace MeinProjekt
             {
                 Back_To_Place();//Hier bringe ich die Form auf 0
                 tableLayoutPanel1.Controls.Remove(Zuladunglbl);
-                tableLayoutPanel1.Controls.Remove(textBox7);
+                tableLayoutPanel1.Controls.Remove(Hubbtn);
                 tableLayoutPanel1.Controls.Remove(textBox8);
                 tableLayoutPanel1.Controls.Remove(Achsenlbl);
                 tableLayoutPanel1.Controls.Add(Hubraumlbl, 0, 6);
@@ -51,7 +51,7 @@ namespace MeinProjekt
                 tableLayoutPanel1.Controls.Remove(Leistunglbl);
                 tableLayoutPanel1.Controls.Remove(textBox8);
                 tableLayoutPanel1.Controls.Remove(Hubraumlbl);
-                tableLayoutPanel1.Controls.Remove(textBox7);
+                tableLayoutPanel1.Controls.Remove(Hubbtn);
                 tableLayoutPanel1.Controls.Remove(textBox1);
                 tableLayoutPanel1.Controls.Remove(PkwMarkenCombo);
                 tableLayoutPanel1.Controls.Remove(MotoMarkenCombo);
@@ -72,7 +72,7 @@ namespace MeinProjekt
                 tableLayoutPanel1.Controls.Remove(Achsenlbl);
                 tableLayoutPanel1.Controls.Remove(textBox4);
                 tableLayoutPanel1.Controls.Add(Hubraumlbl, 0, 6);
-                tableLayoutPanel1.Controls.Add(textBox7, 1, 6);
+                tableLayoutPanel1.Controls.Add(Hubbtn, 1, 6);
                 tableLayoutPanel1.Controls.Remove(textBox1);
                 tableLayoutPanel1.Controls.Remove(PkwMarkenCombo);
                 tableLayoutPanel1.Controls.Remove(LKWMarkenCombo);
@@ -111,7 +111,7 @@ namespace MeinProjekt
             tableLayoutPanel1.Controls.Add(textBox3, 1, 5);
             tableLayoutPanel1.Controls.Add(textBox4, 1, 6);
             tableLayoutPanel1.Controls.Add(textBox5, 1, 7);
-            tableLayoutPanel1.Controls.Add(textBox7, 1, 8);
+            tableLayoutPanel1.Controls.Add(Hubbtn, 1, 8);
             tableLayoutPanel1.Controls.Add(textBox8, 1, 9);
             tableLayoutPanel1.Controls.Add(klassecombo, 1, 10);
 
@@ -123,6 +123,11 @@ namespace MeinProjekt
 
         }
 
+        private void MotoMarkenCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        
     }
 }

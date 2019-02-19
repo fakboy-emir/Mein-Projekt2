@@ -22,12 +22,20 @@ namespace MeinProjekt
         {
             AddCar openForm = new AddCar();
             openForm.Show();
-
+         
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           if(Fahrzeugliste.SelectedIndex != -1)
+            {
+                Fahrzeugliste.Items.RemoveAt(Fahrzeugliste.SelectedIndex);
+            }
         }
     }
 }
