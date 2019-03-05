@@ -31,8 +31,6 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.klassecombo = new System.Windows.Forms.ComboBox();
-            this.Leistunglbl = new System.Windows.Forms.Label();
-            this.Hubraumlbl = new System.Windows.Forms.Label();
             this.Zuladunglbl = new System.Windows.Forms.Label();
             this.Achsenlbl = new System.Windows.Forms.Label();
             this.Preislbl = new System.Windows.Forms.Label();
@@ -49,9 +47,11 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.Hubbtn = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.Jahrcombo = new System.Windows.Forms.ComboBox();
+            this.Hubbtn = new System.Windows.Forms.TextBox();
+            this.Hubraumlbl = new System.Windows.Forms.Label();
+            this.Leistunglbl = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.PkwMarkenCombo = new System.Windows.Forms.ComboBox();
@@ -80,8 +80,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.klassecombo, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Leistunglbl, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Hubraumlbl, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.Zuladunglbl, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.Achsenlbl, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.Preislbl, 0, 5);
@@ -98,11 +96,13 @@
             this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.textBox6, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Hubbtn, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.textBox8, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.Jahrcombo, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Hubbtn, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Hubraumlbl, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Leistunglbl, 0, 8);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(56, 12);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(149, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 11;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.37681F));
@@ -120,7 +120,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(512, 532);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(355, 513);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // klassecombo
@@ -130,33 +130,15 @@
             "-1",
             "0",
             "+1"});
-            this.klassecombo.Location = new System.Drawing.Point(253, 467);
+            this.klassecombo.Location = new System.Drawing.Point(176, 448);
             this.klassecombo.Name = "klassecombo";
             this.klassecombo.Size = new System.Drawing.Size(121, 24);
             this.klassecombo.TabIndex = 1;
             // 
-            // Leistunglbl
-            // 
-            this.Leistunglbl.AutoSize = true;
-            this.Leistunglbl.Location = new System.Drawing.Point(3, 413);
-            this.Leistunglbl.Name = "Leistunglbl";
-            this.Leistunglbl.Size = new System.Drawing.Size(62, 17);
-            this.Leistunglbl.TabIndex = 1;
-            this.Leistunglbl.Text = "Leistung";
-            // 
-            // Hubraumlbl
-            // 
-            this.Hubraumlbl.AutoSize = true;
-            this.Hubraumlbl.Location = new System.Drawing.Point(3, 370);
-            this.Hubraumlbl.Name = "Hubraumlbl";
-            this.Hubraumlbl.Size = new System.Drawing.Size(66, 17);
-            this.Hubraumlbl.TabIndex = 1;
-            this.Hubraumlbl.Text = "Hubraum";
-            // 
             // Zuladunglbl
             // 
             this.Zuladunglbl.AutoSize = true;
-            this.Zuladunglbl.Location = new System.Drawing.Point(3, 326);
+            this.Zuladunglbl.Location = new System.Drawing.Point(3, 307);
             this.Zuladunglbl.Name = "Zuladunglbl";
             this.Zuladunglbl.Size = new System.Drawing.Size(68, 17);
             this.Zuladunglbl.TabIndex = 1;
@@ -165,7 +147,7 @@
             // Achsenlbl
             // 
             this.Achsenlbl.AutoSize = true;
-            this.Achsenlbl.Location = new System.Drawing.Point(3, 281);
+            this.Achsenlbl.Location = new System.Drawing.Point(3, 262);
             this.Achsenlbl.Name = "Achsenlbl";
             this.Achsenlbl.Size = new System.Drawing.Size(55, 17);
             this.Achsenlbl.TabIndex = 1;
@@ -174,7 +156,7 @@
             // Preislbl
             // 
             this.Preislbl.AutoSize = true;
-            this.Preislbl.Location = new System.Drawing.Point(3, 235);
+            this.Preislbl.Location = new System.Drawing.Point(3, 216);
             this.Preislbl.Name = "Preislbl";
             this.Preislbl.Size = new System.Drawing.Size(40, 17);
             this.Preislbl.TabIndex = 1;
@@ -183,7 +165,7 @@
             // Jahrlbl
             // 
             this.Jahrlbl.AutoSize = true;
-            this.Jahrlbl.Location = new System.Drawing.Point(3, 190);
+            this.Jahrlbl.Location = new System.Drawing.Point(3, 171);
             this.Jahrlbl.Name = "Jahrlbl";
             this.Jahrlbl.Size = new System.Drawing.Size(36, 17);
             this.Jahrlbl.TabIndex = 1;
@@ -196,7 +178,7 @@
             "PKW",
             "LKW",
             "Motorrad"});
-            this.comboBoxFahrzeugtyp.Location = new System.Drawing.Point(253, 3);
+            this.comboBoxFahrzeugtyp.Location = new System.Drawing.Point(176, 3);
             this.comboBoxFahrzeugtyp.Name = "comboBoxFahrzeugtyp";
             this.comboBoxFahrzeugtyp.Size = new System.Drawing.Size(121, 24);
             this.comboBoxFahrzeugtyp.TabIndex = 3;
@@ -214,7 +196,7 @@
             // Herstellerlbl
             // 
             this.Herstellerlbl.AutoSize = true;
-            this.Herstellerlbl.Location = new System.Drawing.Point(3, 44);
+            this.Herstellerlbl.Location = new System.Drawing.Point(3, 35);
             this.Herstellerlbl.Name = "Herstellerlbl";
             this.Herstellerlbl.Size = new System.Drawing.Size(69, 17);
             this.Herstellerlbl.TabIndex = 1;
@@ -223,7 +205,7 @@
             // Klasselbl
             // 
             this.Klasselbl.AutoSize = true;
-            this.Klasselbl.Location = new System.Drawing.Point(3, 464);
+            this.Klasselbl.Location = new System.Drawing.Point(3, 445);
             this.Klasselbl.Name = "Klasselbl";
             this.Klasselbl.Size = new System.Drawing.Size(115, 17);
             this.Klasselbl.TabIndex = 1;
@@ -232,7 +214,7 @@
             // Modelllbl
             // 
             this.Modelllbl.AutoSize = true;
-            this.Modelllbl.Location = new System.Drawing.Point(3, 95);
+            this.Modelllbl.Location = new System.Drawing.Point(3, 76);
             this.Modelllbl.Name = "Modelllbl";
             this.Modelllbl.Size = new System.Drawing.Size(49, 17);
             this.Modelllbl.TabIndex = 1;
@@ -241,7 +223,7 @@
             // Kennzeichenlbl
             // 
             this.Kennzeichenlbl.AutoSize = true;
-            this.Kennzeichenlbl.Location = new System.Drawing.Point(3, 147);
+            this.Kennzeichenlbl.Location = new System.Drawing.Point(3, 128);
             this.Kennzeichenlbl.Name = "Kennzeichenlbl";
             this.Kennzeichenlbl.Size = new System.Drawing.Size(90, 17);
             this.Kennzeichenlbl.TabIndex = 1;
@@ -249,59 +231,62 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(253, 47);
+            this.textBox1.Location = new System.Drawing.Point(176, 38);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 22);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(253, 98);
+            this.textBox2.Location = new System.Drawing.Point(176, 79);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(161, 22);
             this.textBox2.TabIndex = 4;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(253, 238);
+            this.textBox3.Location = new System.Drawing.Point(176, 219);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(121, 22);
             this.textBox3.TabIndex = 5;
+            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(253, 284);
+            this.textBox4.Location = new System.Drawing.Point(176, 265);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(121, 22);
             this.textBox4.TabIndex = 6;
+            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(253, 329);
+            this.textBox5.Location = new System.Drawing.Point(176, 310);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(121, 22);
             this.textBox5.TabIndex = 7;
+            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(253, 150);
+            this.textBox6.Location = new System.Drawing.Point(176, 131);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(161, 22);
             this.textBox6.TabIndex = 8;
-            // 
-            // Hubbtn
-            // 
-            this.Hubbtn.Location = new System.Drawing.Point(253, 373);
-            this.Hubbtn.Name = "Hubbtn";
-            this.Hubbtn.Size = new System.Drawing.Size(121, 22);
-            this.Hubbtn.TabIndex = 9;
+            this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(253, 416);
+            this.textBox8.Location = new System.Drawing.Point(176, 397);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(121, 22);
             this.textBox8.TabIndex = 10;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // Jahrcombo
             // 
@@ -337,10 +322,37 @@
             "2017",
             "2018",
             "2019"});
-            this.Jahrcombo.Location = new System.Drawing.Point(253, 193);
+            this.Jahrcombo.Location = new System.Drawing.Point(176, 174);
             this.Jahrcombo.Name = "Jahrcombo";
             this.Jahrcombo.Size = new System.Drawing.Size(121, 24);
             this.Jahrcombo.TabIndex = 11;
+            // 
+            // Hubbtn
+            // 
+            this.Hubbtn.Location = new System.Drawing.Point(176, 354);
+            this.Hubbtn.Name = "Hubbtn";
+            this.Hubbtn.Size = new System.Drawing.Size(121, 22);
+            this.Hubbtn.TabIndex = 9;
+            this.Hubbtn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hubbtn_KeyDown);
+            this.Hubbtn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Hubbtn_KeyPress);
+            // 
+            // Hubraumlbl
+            // 
+            this.Hubraumlbl.AutoSize = true;
+            this.Hubraumlbl.Location = new System.Drawing.Point(3, 394);
+            this.Hubraumlbl.Name = "Hubraumlbl";
+            this.Hubraumlbl.Size = new System.Drawing.Size(66, 17);
+            this.Hubraumlbl.TabIndex = 1;
+            this.Hubraumlbl.Text = "Hubraum";
+            // 
+            // Leistunglbl
+            // 
+            this.Leistunglbl.AutoSize = true;
+            this.Leistunglbl.Location = new System.Drawing.Point(3, 351);
+            this.Leistunglbl.Name = "Leistunglbl";
+            this.Leistunglbl.Size = new System.Drawing.Size(62, 17);
+            this.Leistunglbl.TabIndex = 1;
+            this.Leistunglbl.Text = "Leistung";
             // 
             // SaveBtn
             // 

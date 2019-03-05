@@ -37,5 +37,10 @@ namespace MeinProjekt
                 Fahrzeugliste.Items.RemoveAt(Fahrzeugliste.SelectedIndex);
             }
         }
+
+        private void listlbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

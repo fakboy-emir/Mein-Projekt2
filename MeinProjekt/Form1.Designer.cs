@@ -35,11 +35,12 @@
             this.Calcbtn = new System.Windows.Forms.Button();
             this.Assignbtn = new System.Windows.Forms.Button();
             this.Fahrzeugliste = new System.Windows.Forms.ListBox();
+            this.listlbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Addbtn
             // 
-            this.Addbtn.Location = new System.Drawing.Point(115, 100);
+            this.Addbtn.Location = new System.Drawing.Point(115, 53);
             this.Addbtn.Name = "Addbtn";
             this.Addbtn.Size = new System.Drawing.Size(154, 46);
             this.Addbtn.TabIndex = 3;
@@ -49,7 +50,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(115, 384);
+            this.button1.Location = new System.Drawing.Point(115, 223);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(154, 46);
             this.button1.TabIndex = 4;
@@ -59,7 +60,7 @@
             // 
             // Searchbtn
             // 
-            this.Searchbtn.Location = new System.Drawing.Point(609, 102);
+            this.Searchbtn.Location = new System.Drawing.Point(609, 53);
             this.Searchbtn.Name = "Searchbtn";
             this.Searchbtn.Size = new System.Drawing.Size(135, 44);
             this.Searchbtn.TabIndex = 5;
@@ -68,7 +69,7 @@
             // 
             // OutPutbtn
             // 
-            this.OutPutbtn.Location = new System.Drawing.Point(609, 200);
+            this.OutPutbtn.Location = new System.Drawing.Point(609, 225);
             this.OutPutbtn.Name = "OutPutbtn";
             this.OutPutbtn.Size = new System.Drawing.Size(135, 44);
             this.OutPutbtn.TabIndex = 6;
@@ -77,16 +78,16 @@
             // 
             // Calcbtn
             // 
-            this.Calcbtn.Location = new System.Drawing.Point(609, 298);
+            this.Calcbtn.Location = new System.Drawing.Point(115, 419);
             this.Calcbtn.Name = "Calcbtn";
-            this.Calcbtn.Size = new System.Drawing.Size(135, 44);
+            this.Calcbtn.Size = new System.Drawing.Size(154, 44);
             this.Calcbtn.TabIndex = 7;
             this.Calcbtn.Text = "Calculate";
             this.Calcbtn.UseVisualStyleBackColor = true;
             // 
             // Assignbtn
             // 
-            this.Assignbtn.Location = new System.Drawing.Point(609, 386);
+            this.Assignbtn.Location = new System.Drawing.Point(609, 419);
             this.Assignbtn.Name = "Assignbtn";
             this.Assignbtn.Size = new System.Drawing.Size(135, 44);
             this.Assignbtn.TabIndex = 8;
@@ -97,18 +98,27 @@
             // 
             this.Fahrzeugliste.FormattingEnabled = true;
             this.Fahrzeugliste.ItemHeight = 16;
-            this.Fahrzeugliste.Items.AddRange(new object[] {
-            "hallo"});
-            this.Fahrzeugliste.Location = new System.Drawing.Point(275, 12);
+            this.Fahrzeugliste.Location = new System.Drawing.Point(275, 44);
             this.Fahrzeugliste.Name = "Fahrzeugliste";
-            this.Fahrzeugliste.Size = new System.Drawing.Size(328, 468);
+            this.Fahrzeugliste.Size = new System.Drawing.Size(328, 436);
             this.Fahrzeugliste.TabIndex = 9;
+            // 
+            // listlbl
+            // 
+            this.listlbl.AutoSize = true;
+            this.listlbl.Location = new System.Drawing.Point(367, 24);
+            this.listlbl.Name = "listlbl";
+            this.listlbl.Size = new System.Drawing.Size(135, 17);
+            this.listlbl.TabIndex = 10;
+            this.listlbl.Text = "Meine Fahrzeugliste";
+            this.listlbl.Click += new System.EventHandler(this.listlbl_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(830, 500);
+            this.Controls.Add(this.listlbl);
             this.Controls.Add(this.Fahrzeugliste);
             this.Controls.Add(this.Assignbtn);
             this.Controls.Add(this.Calcbtn);
@@ -120,6 +130,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -131,6 +142,7 @@
         private System.Windows.Forms.Button Calcbtn;
         private System.Windows.Forms.Button Assignbtn;
         private System.Windows.Forms.ListBox Fahrzeugliste;
+        private System.Windows.Forms.Label listlbl;
     }
 }
 
