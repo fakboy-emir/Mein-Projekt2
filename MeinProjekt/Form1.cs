@@ -7,12 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace MeinProjekt
 {
     public partial class Form1 : Form
     {
-        List<FahrzeugHinzufügen> Fahrzeug = new List<FahrzeugHinzufügen>();
+       
+        public List<FahrzeugHinzufügen> fahrzeug
+        {
+            get { return fahrzeug; }
+            set { fahrzeug = value; }
+        }
 
         public Form1()
         {
@@ -34,7 +41,7 @@ namespace MeinProjekt
 
                 
                 Fahrzeugliste.Items.Add(hinzufügen.haupt);
-                Fahrzeug.Add(hinzufügen);
+                fahrzeug.Add(hinzufügen);
             }
             
         }
@@ -57,6 +64,41 @@ namespace MeinProjekt
 
         }
 
+        public void Speichern()
+        {
+            try
+            {
+                FileStream stream;
+                stream = new FileStream("FahrzeugChronik.ect", FileMode.OpenOrCreate);
+                BinaryFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(stream, fahrzeug);
+                stream.Close();
+            }
+            catch(IOException e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+        public void Laden()
+        {
+            try
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                FileStream stream;
+                stream = new FileStream("FahrzeugChronik.ect", FileMode.Open);
+                fahrzeug = (List<FahrzeugHinzufügen>)formatter.Deserialize(stream);
+                stream.Close();
+
+                foreach (Fahrzeug fahrzeug in fahrzeug)
+                {
+                    Fahrzeugliste.Add(fahrzeug);
+                }
+            }
+            catch(IOException e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
 
 
         private void Fahrzeugliste_DoubleClick(object sender, EventArgs e)
@@ -84,10 +126,7 @@ namespace MeinProjekt
         private void ausgebenBtn_Click(object sender, EventArgs e)
         {
             tableLayoutPanel2.Visible = true;
-            if(Fahrzeugliste.SelectedItem != null)
-            {
-               // Fahrzeugliste.SelectedItem = textBox7.Text();
-            }
+            Laden();
         }
     }
 }

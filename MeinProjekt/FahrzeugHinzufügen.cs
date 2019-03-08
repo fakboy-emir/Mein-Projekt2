@@ -124,8 +124,9 @@ namespace MeinProjekt
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-
-            this.Close();
+            Form1 form = new Form1();
+            form.Speichern();
+           
         }
 
         private void MotoMarkenCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -229,7 +230,7 @@ namespace MeinProjekt
 
             }
         }
-
+        
         private void FahrzeugHinzufügen_FormClosing(object sender, FormClosingEventArgs e)
         {
             try
