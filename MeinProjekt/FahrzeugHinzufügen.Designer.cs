@@ -1,6 +1,6 @@
 ﻿namespace MeinProjekt
 {
-    partial class AddCar
+    partial class FahrzeugHinzufügen
     {
         /// <summary>
         /// Required designer variable.
@@ -57,6 +57,7 @@
             this.PkwMarkenCombo = new System.Windows.Forms.ComboBox();
             this.LKWMarkenCombo = new System.Windows.Forms.ComboBox();
             this.MotoMarkenCombo = new System.Windows.Forms.ComboBox();
+            this.Steuernlbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -133,7 +134,7 @@
             this.klassecombo.Location = new System.Drawing.Point(176, 448);
             this.klassecombo.Name = "klassecombo";
             this.klassecombo.Size = new System.Drawing.Size(121, 24);
-            this.klassecombo.TabIndex = 1;
+            this.klassecombo.TabIndex = 11;
             // 
             // Zuladunglbl
             // 
@@ -141,7 +142,7 @@
             this.Zuladunglbl.Location = new System.Drawing.Point(3, 307);
             this.Zuladunglbl.Name = "Zuladunglbl";
             this.Zuladunglbl.Size = new System.Drawing.Size(68, 17);
-            this.Zuladunglbl.TabIndex = 1;
+            this.Zuladunglbl.TabIndex = 8;
             this.Zuladunglbl.Text = "Zuladung";
             // 
             // Achsenlbl
@@ -150,7 +151,7 @@
             this.Achsenlbl.Location = new System.Drawing.Point(3, 262);
             this.Achsenlbl.Name = "Achsenlbl";
             this.Achsenlbl.Size = new System.Drawing.Size(55, 17);
-            this.Achsenlbl.TabIndex = 1;
+            this.Achsenlbl.TabIndex = 7;
             this.Achsenlbl.Text = "Achsen";
             // 
             // Preislbl
@@ -159,7 +160,7 @@
             this.Preislbl.Location = new System.Drawing.Point(3, 216);
             this.Preislbl.Name = "Preislbl";
             this.Preislbl.Size = new System.Drawing.Size(40, 17);
-            this.Preislbl.TabIndex = 1;
+            this.Preislbl.TabIndex = 6;
             this.Preislbl.Text = "Preis";
             // 
             // Jahrlbl
@@ -168,7 +169,7 @@
             this.Jahrlbl.Location = new System.Drawing.Point(3, 171);
             this.Jahrlbl.Name = "Jahrlbl";
             this.Jahrlbl.Size = new System.Drawing.Size(36, 17);
-            this.Jahrlbl.TabIndex = 1;
+            this.Jahrlbl.TabIndex = 5;
             this.Jahrlbl.Text = "Jahr";
             // 
             // comboBoxFahrzeugtyp
@@ -181,7 +182,7 @@
             this.comboBoxFahrzeugtyp.Location = new System.Drawing.Point(176, 3);
             this.comboBoxFahrzeugtyp.Name = "comboBoxFahrzeugtyp";
             this.comboBoxFahrzeugtyp.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxFahrzeugtyp.TabIndex = 3;
+            this.comboBoxFahrzeugtyp.TabIndex = 1;
             this.comboBoxFahrzeugtyp.SelectedIndexChanged += new System.EventHandler(this.comboBoxFahrzeugtyp_SelectedIndexChanged);
             // 
             // Typlbl7
@@ -190,7 +191,7 @@
             this.Typlbl7.Location = new System.Drawing.Point(3, 0);
             this.Typlbl7.Name = "Typlbl7";
             this.Typlbl7.Size = new System.Drawing.Size(92, 17);
-            this.Typlbl7.TabIndex = 2;
+            this.Typlbl7.TabIndex = 1;
             this.Typlbl7.Text = "FahrzeugTyp";
             // 
             // Herstellerlbl
@@ -199,7 +200,7 @@
             this.Herstellerlbl.Location = new System.Drawing.Point(3, 35);
             this.Herstellerlbl.Name = "Herstellerlbl";
             this.Herstellerlbl.Size = new System.Drawing.Size(69, 17);
-            this.Herstellerlbl.TabIndex = 1;
+            this.Herstellerlbl.TabIndex = 2;
             this.Herstellerlbl.Text = "Hersteller";
             // 
             // Klasselbl
@@ -208,7 +209,7 @@
             this.Klasselbl.Location = new System.Drawing.Point(3, 445);
             this.Klasselbl.Name = "Klasselbl";
             this.Klasselbl.Size = new System.Drawing.Size(115, 17);
-            this.Klasselbl.TabIndex = 1;
+            this.Klasselbl.TabIndex = 11;
             this.Klasselbl.Text = "Schadstoffklasse";
             // 
             // Modelllbl
@@ -217,7 +218,7 @@
             this.Modelllbl.Location = new System.Drawing.Point(3, 76);
             this.Modelllbl.Name = "Modelllbl";
             this.Modelllbl.Size = new System.Drawing.Size(49, 17);
-            this.Modelllbl.TabIndex = 1;
+            this.Modelllbl.TabIndex = 3;
             this.Modelllbl.Text = "Modell";
             // 
             // Kennzeichenlbl
@@ -226,7 +227,7 @@
             this.Kennzeichenlbl.Location = new System.Drawing.Point(3, 128);
             this.Kennzeichenlbl.Name = "Kennzeichenlbl";
             this.Kennzeichenlbl.Size = new System.Drawing.Size(90, 17);
-            this.Kennzeichenlbl.TabIndex = 1;
+            this.Kennzeichenlbl.TabIndex = 4;
             this.Kennzeichenlbl.Text = "Kennzeichen";
             // 
             // textBox1
@@ -234,15 +235,14 @@
             this.textBox1.Location = new System.Drawing.Point(176, 38);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 1;
+            this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(176, 79);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(161, 22);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.textBox2.TabIndex = 3;
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox3
@@ -250,8 +250,7 @@
             this.textBox3.Location = new System.Drawing.Point(176, 219);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(121, 22);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
+            this.textBox3.TabIndex = 6;
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox4
@@ -259,8 +258,7 @@
             this.textBox4.Location = new System.Drawing.Point(176, 265);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(121, 22);
-            this.textBox4.TabIndex = 6;
-            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
+            this.textBox4.TabIndex = 7;
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // textBox5
@@ -268,8 +266,7 @@
             this.textBox5.Location = new System.Drawing.Point(176, 310);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(121, 22);
-            this.textBox5.TabIndex = 7;
-            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
+            this.textBox5.TabIndex = 8;
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox6
@@ -277,8 +274,7 @@
             this.textBox6.Location = new System.Drawing.Point(176, 131);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(161, 22);
-            this.textBox6.TabIndex = 8;
-            this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
+            this.textBox6.TabIndex = 4;
             // 
             // textBox8
             // 
@@ -325,7 +321,7 @@
             this.Jahrcombo.Location = new System.Drawing.Point(176, 174);
             this.Jahrcombo.Name = "Jahrcombo";
             this.Jahrcombo.Size = new System.Drawing.Size(121, 24);
-            this.Jahrcombo.TabIndex = 11;
+            this.Jahrcombo.TabIndex = 5;
             // 
             // Hubbtn
             // 
@@ -333,7 +329,6 @@
             this.Hubbtn.Name = "Hubbtn";
             this.Hubbtn.Size = new System.Drawing.Size(121, 22);
             this.Hubbtn.TabIndex = 9;
-            this.Hubbtn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hubbtn_KeyDown);
             this.Hubbtn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Hubbtn_KeyPress);
             // 
             // Hubraumlbl
@@ -342,7 +337,7 @@
             this.Hubraumlbl.Location = new System.Drawing.Point(3, 394);
             this.Hubraumlbl.Name = "Hubraumlbl";
             this.Hubraumlbl.Size = new System.Drawing.Size(66, 17);
-            this.Hubraumlbl.TabIndex = 1;
+            this.Hubraumlbl.TabIndex = 10;
             this.Hubraumlbl.Text = "Hubraum";
             // 
             // Leistunglbl
@@ -351,7 +346,7 @@
             this.Leistunglbl.Location = new System.Drawing.Point(3, 351);
             this.Leistunglbl.Name = "Leistunglbl";
             this.Leistunglbl.Size = new System.Drawing.Size(62, 17);
-            this.Leistunglbl.TabIndex = 1;
+            this.Leistunglbl.TabIndex = 9;
             this.Leistunglbl.Text = "Leistung";
             // 
             // SaveBtn
@@ -434,22 +429,34 @@
             this.MotoMarkenCombo.TabIndex = 4;
             this.MotoMarkenCombo.SelectedIndexChanged += new System.EventHandler(this.MotoMarkenCombo_SelectedIndexChanged);
             // 
-            // AddCar
+            // Steuernlbl
+            // 
+            this.Steuernlbl.AutoSize = true;
+            this.Steuernlbl.Location = new System.Drawing.Point(659, 293);
+            this.Steuernlbl.Name = "Steuernlbl";
+            this.Steuernlbl.Size = new System.Drawing.Size(86, 17);
+            this.Steuernlbl.TabIndex = 5;
+            this.Steuernlbl.Text = "Ihre Steuern";
+            // 
+            // FahrzeugHinzufügen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 556);
+            this.Controls.Add(this.Steuernlbl);
             this.Controls.Add(this.MotoMarkenCombo);
             this.Controls.Add(this.LKWMarkenCombo);
             this.Controls.Add(this.PkwMarkenCombo);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "AddCar";
+            this.Name = "FahrzeugHinzufügen";
             this.Text = "AddCar";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FahrzeugHinzufügen_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -484,5 +491,6 @@
         private System.Windows.Forms.ComboBox PkwMarkenCombo;
         private System.Windows.Forms.ComboBox LKWMarkenCombo;
         private System.Windows.Forms.ComboBox MotoMarkenCombo;
+        private System.Windows.Forms.Label Steuernlbl;
     }
 }

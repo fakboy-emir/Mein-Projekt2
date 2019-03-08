@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MeinProjekt
 {
-    class PKWs : Fahrzeugarten
+    public class PKWs : Fahrzeug
     {
 
         private double hubraum;

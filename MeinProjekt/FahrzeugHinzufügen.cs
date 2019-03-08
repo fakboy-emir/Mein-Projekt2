@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace MeinProjekt
 {
-    public partial class AddCar : Form
+    public partial class FahrzeugHinzufügen : Form
     {
-        public AddCar()
+        public Fahrzeug haupt { get; set; }
+
+        public FahrzeugHinzufügen()
         {
             InitializeComponent();
 
@@ -20,6 +22,8 @@ namespace MeinProjekt
             this.PkwMarkenCombo.Visible = false;
             this.LKWMarkenCombo.Visible = false;
             this.MotoMarkenCombo.Visible = false;
+            this.Steuernlbl.Visible = false;
+           
         }
 
         private void comboBoxFahrzeugtyp_SelectedIndexChanged(object sender, EventArgs e)
@@ -121,7 +125,7 @@ namespace MeinProjekt
         private void SaveBtn_Click(object sender, EventArgs e)
         {
 
-            Application.Restart();
+            this.Close();
         }
 
         private void MotoMarkenCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -226,52 +230,38 @@ namespace MeinProjekt
             }
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        private void FahrzeugHinzufügen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                SendKeys.Send("{TAB}");
-            }
-        }
 
-        private void textBox3_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
+            switch(comboBoxFahrzeugtyp.Text)
             {
-                SendKeys.Send("{TAB}");
+                case "PKW":
+                    haupt = new PKWs();
+                    break;
+                case "LKW":
+                    haupt = new LKWs();
+                    break;
+                case "Motorrad":
+                    haupt = new Motorräder();
+                    break;                  
             }
-        }
+            haupt.Hersteller = textBox1.Text;
+            haupt.Modell = textBox2.Text;
+            haupt.Kennzeichen = textBox6.Text;
+            haupt.Jahr_Der_Erstzulassung = Jahrcombo.Text;
+            haupt.Preis = textBox3.Text;
 
-        private void textBox4_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                SendKeys.Send("{TAB}");
             }
-        }
+            catch (Exception )
+            {
 
-        private void textBox5_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                SendKeys.Send("{TAB}");
+               
             }
         }
+    
 
-        private void Hubbtn_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                SendKeys.Send("{TAB}");
-            }
-        }
-
-        private void textBox6_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                SendKeys.Send("{TAB}");
-            }
-        }
+       
     }
 }

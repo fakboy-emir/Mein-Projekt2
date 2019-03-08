@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MeinProjekt
 {
-    class LKWs : Fahrzeugarten
+    public class LKWs : Fahrzeug
     {
         private double anzahl_der_achsen;
 

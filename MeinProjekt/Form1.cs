@@ -12,17 +12,31 @@ namespace MeinProjekt
 {
     public partial class Form1 : Form
     {
+        List<FahrzeugHinzufügen> Fahrzeug = new List<FahrzeugHinzufügen>();
+
         public Form1()
         {
             InitializeComponent();
+            Fahrzeugliste.DisplayMember = "Kennzeichen";
+            this.tableLayoutPanel2.Visible = false;
         }
 
 
         private void BtnClick(object sender, EventArgs e)
         {
-            AddCar openForm = new AddCar();
-            openForm.Show();
-         
+          
+
+            using (FahrzeugHinzufügen hinzufügen = new FahrzeugHinzufügen())
+            {
+             
+
+                hinzufügen.ShowDialog();
+
+                
+                Fahrzeugliste.Items.Add(hinzufügen.haupt);
+                Fahrzeug.Add(hinzufügen);
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,6 +55,39 @@ namespace MeinProjekt
         private void listlbl_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+
+        private void Fahrzeugliste_DoubleClick(object sender, EventArgs e)
+        {
+            FahrzeugHinzufügen openForm = new FahrzeugHinzufügen();
+            openForm.Show();
+            Fahrzeugliste.BeginUpdate();
+            Fahrzeugliste.EndUpdate();
+        }
+
+        private void berechnenbtn_Click(object sender, EventArgs e)
+        {
+            if (Fahrzeugliste.Items != null)
+            {
+                FahrzeugHinzufügen openForm = new FahrzeugHinzufügen();
+                openForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sie müssen erst ein Fahrzeug Hinzufügen");
+            }
+            
+        }
+
+        private void ausgebenBtn_Click(object sender, EventArgs e)
+        {
+            tableLayoutPanel2.Visible = true;
+            if(Fahrzeugliste.SelectedItem != null)
+            {
+               // Fahrzeugliste.SelectedItem = textBox7.Text();
+            }
         }
     }
 }

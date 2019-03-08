@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MeinProjekt
 {
-    abstract class Fahrzeugarten
+    public abstract class Fahrzeug
     {
         private string hersteller;
 
@@ -32,24 +32,24 @@ namespace MeinProjekt
             set { kennzeichen = value; }
         }
 
-        private DateTime jahr_der_erstzulassung;
+        private string jahr_der_erstzulassung;
 
-        public DateTime Jahr_Der_Erstzulassung
+        public string Jahr_Der_Erstzulassung
         {
             get { return jahr_der_erstzulassung; }
             set { jahr_der_erstzulassung = value; }
         }
 
-        private double preis;
+        private string preis;
 
-        public double Peis
+        public string Preis
         {
             get { return preis; }
             set { preis = value; }
         }
 
         private string fahrzeugtyp;
-
+        
         public string FahrzeugTyp
         {
             get { return fahrzeugtyp; }
@@ -64,7 +64,7 @@ namespace MeinProjekt
             set { steuerberechnen = value; }
         }
 
-
+    
 
 
 
