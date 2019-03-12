@@ -110,7 +110,7 @@ namespace MeinProjekt
             tableLayoutPanel1.Controls.Add(comboBoxFahrzeugtyp, 1, 0);
             tableLayoutPanel1.Controls.Add(textBox1, 1, 1);
             tableLayoutPanel1.Controls.Add(textBox2, 1, 2);
-            tableLayoutPanel1.Controls.Add(textBox6, 1, 3);
+            tableLayoutPanel1.Controls.Add(maskedkenn, 1, 3);
             tableLayoutPanel1.Controls.Add(Jahrcombo, 1, 4);
             tableLayoutPanel1.Controls.Add(textBox3, 1, 5);
             tableLayoutPanel1.Controls.Add(textBox4, 1, 6);
@@ -250,7 +250,7 @@ namespace MeinProjekt
             }
             haupt.Hersteller = textBox1.Text;
             haupt.Modell = textBox2.Text;
-            haupt.Kennzeichen = textBox6.Text;
+            haupt.Kennzeichen = maskedkenn.Text;
             haupt.Jahr_Der_Erstzulassung = Jahrcombo.Text;
             haupt.Preis = textBox3.Text;
 

@@ -52,7 +52,7 @@
     <Compile Include="FahrzeugHinzufügen.Designer.cs">
       <DependentUpon>FahrzeugHinzufügen.cs</DependentUpon>
     </Compile>
-    <Compile Include="HauptEigenschaften.cs" />
+    <Compile Include="Fahrzeug.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

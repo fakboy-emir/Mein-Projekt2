@@ -46,7 +46,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.Jahrcombo = new System.Windows.Forms.ComboBox();
             this.Hubbtn = new System.Windows.Forms.TextBox();
@@ -58,6 +57,7 @@
             this.LKWMarkenCombo = new System.Windows.Forms.ComboBox();
             this.MotoMarkenCombo = new System.Windows.Forms.ComboBox();
             this.Steuernlbl = new System.Windows.Forms.Label();
+            this.maskedkenn = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.maskedkenn, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.klassecombo, 1, 10);
             this.tableLayoutPanel1.Controls.Add(this.Zuladunglbl, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.Achsenlbl, 0, 6);
@@ -96,7 +97,6 @@
             this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.textBox6, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBox8, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.Jahrcombo, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.Hubbtn, 1, 8);
@@ -269,13 +269,6 @@
             this.textBox5.TabIndex = 8;
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(176, 131);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(161, 22);
-            this.textBox6.TabIndex = 4;
-            // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(176, 397);
@@ -351,7 +344,7 @@
             // 
             // SaveBtn
             // 
-            this.SaveBtn.Location = new System.Drawing.Point(624, 479);
+            this.SaveBtn.Location = new System.Drawing.Point(616, 490);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(129, 35);
             this.SaveBtn.TabIndex = 1;
@@ -438,6 +431,14 @@
             this.Steuernlbl.TabIndex = 5;
             this.Steuernlbl.Text = "Ihre Steuern";
             // 
+            // maskedkenn
+            // 
+            this.maskedkenn.Location = new System.Drawing.Point(176, 131);
+            this.maskedkenn.Mask = "K-LL-0000";
+            this.maskedkenn.Name = "maskedkenn";
+            this.maskedkenn.Size = new System.Drawing.Size(121, 22);
+            this.maskedkenn.TabIndex = 10;
+            // 
             // FahrzeugHinzufügen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -482,7 +483,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox Hubbtn;
         private System.Windows.Forms.TextBox textBox8;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
@@ -492,5 +492,6 @@
         private System.Windows.Forms.ComboBox LKWMarkenCombo;
         private System.Windows.Forms.ComboBox MotoMarkenCombo;
         private System.Windows.Forms.Label Steuernlbl;
+        private System.Windows.Forms.MaskedTextBox maskedkenn;
     }
 }

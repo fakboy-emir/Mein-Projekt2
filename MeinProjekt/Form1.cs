@@ -14,18 +14,21 @@ namespace MeinProjekt
 {
     public partial class Form1 : Form
     {
-       
+
         public List<FahrzeugHinzufügen> fahrzeug
         {
             get { return fahrzeug; }
             set { fahrzeug = value; }
         }
 
+     
+
         public Form1()
         {
             InitializeComponent();
             Fahrzeugliste.DisplayMember = "Kennzeichen";
             this.tableLayoutPanel2.Visible = false;
+            
         }
 
 
@@ -43,7 +46,7 @@ namespace MeinProjekt
                 Fahrzeugliste.Items.Add(hinzufügen.haupt);
                 fahrzeug.Add(hinzufügen);
             }
-            
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -74,30 +77,14 @@ namespace MeinProjekt
                 formatter.Serialize(stream, fahrzeug);
                 stream.Close();
             }
-            catch(IOException e)
+            catch (IOException e)
             {
                 MessageBox.Show(e.ToString());
             }
         }
         public void Laden()
         {
-            try
-            {
-                BinaryFormatter formatter = new BinaryFormatter();
-                FileStream stream;
-                stream = new FileStream("FahrzeugChronik.ect", FileMode.Open);
-                fahrzeug = (List<FahrzeugHinzufügen>)formatter.Deserialize(stream);
-                stream.Close();
-
-                foreach (Fahrzeug fahrzeug in fahrzeug)
-                {
-                    Fahrzeugliste.Add(fahrzeug);
-                }
-            }
-            catch(IOException e)
-            {
-                MessageBox.Show(e.ToString());
-            }
+           
         }
 
 
@@ -127,6 +114,16 @@ namespace MeinProjekt
         {
             tableLayoutPanel2.Visible = true;
             Laden();
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void Fahrzeugliste_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Fahrzeugliste.SelectedItem = textBox1.Text;
         }
     }
 }

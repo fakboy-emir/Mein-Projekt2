@@ -51,7 +51,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.Hubbtn = new System.Windows.Forms.TextBox();
             this.Hubraumlbl = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,6 +138,7 @@
             this.Fahrzeugliste.Name = "Fahrzeugliste";
             this.Fahrzeugliste.Size = new System.Drawing.Size(502, 308);
             this.Fahrzeugliste.TabIndex = 7;
+            this.Fahrzeugliste.SelectedIndexChanged += new System.EventHandler(this.Fahrzeugliste_SelectedIndexChanged);
             this.Fahrzeugliste.DoubleClick += new System.EventHandler(this.Fahrzeugliste_DoubleClick);
             // 
             // tableLayoutPanel2
@@ -153,6 +154,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.maskedTextBox1, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.Zuladunglbl, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.Achsenlbl, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.Preislbl, 0, 5);
@@ -167,7 +169,6 @@
             this.tableLayoutPanel2.Controls.Add(this.textBox3, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.textBox4, 1, 6);
             this.tableLayoutPanel2.Controls.Add(this.textBox5, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.textBox6, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.textBox8, 1, 9);
             this.tableLayoutPanel2.Controls.Add(this.Hubbtn, 1, 8);
             this.tableLayoutPanel2.Controls.Add(this.Hubraumlbl, 0, 9);
@@ -313,13 +314,6 @@
             this.textBox5.Size = new System.Drawing.Size(121, 22);
             this.textBox5.TabIndex = 8;
             // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(182, 127);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(161, 22);
-            this.textBox6.TabIndex = 4;
-            // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(182, 393);
@@ -373,6 +367,15 @@
             this.textBox10.Size = new System.Drawing.Size(121, 22);
             this.textBox10.TabIndex = 14;
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(182, 127);
+            this.maskedTextBox1.Mask = "K-LL-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(121, 22);
+            this.maskedTextBox1.TabIndex = 9;
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -421,7 +424,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox Hubbtn;
         private System.Windows.Forms.Label Hubraumlbl;
@@ -429,6 +431,7 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
 
