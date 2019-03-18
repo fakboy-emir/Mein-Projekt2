@@ -22,7 +22,7 @@ namespace MeinProjekt
             this.PkwMarkenCombo.Visible = false;
             this.LKWMarkenCombo.Visible = false;
             this.MotoMarkenCombo.Visible = false;
-            this.Steuernlbl.Visible = false;
+           
            
         }
 
@@ -125,7 +125,7 @@ namespace MeinProjekt
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
-            form.Speichern();
+            this.Close();
            
         }
 
@@ -231,38 +231,70 @@ namespace MeinProjekt
             }
         }
         
-        private void FahrzeugHinzufügen_FormClosing(object sender, FormClosingEventArgs e)
+        public void FahrzeugHinzufügen_FormClosing(object sender, FormClosingEventArgs e)
         {
             try
             {
 
-            switch(comboBoxFahrzeugtyp.Text)
-            {
-                case "PKW":
-                    haupt = new PKWs();
-                    break;
-                case "LKW":
-                    haupt = new LKWs();
-                    break;
-                case "Motorrad":
-                    haupt = new Motorräder();
-                    break;                  
-            }
-            haupt.Hersteller = textBox1.Text;
-            haupt.Modell = textBox2.Text;
-            haupt.Kennzeichen = maskedkenn.Text;
-            haupt.Jahr_Der_Erstzulassung = Jahrcombo.Text;
-            haupt.Preis = textBox3.Text;
+                switch (comboBoxFahrzeugtyp.Text)
+                {
+                    case "PKW":
+                        haupt = new PKWs();
+                        ((PKWs)haupt).Leistung = textBox8.Text;
+                        ((PKWs)haupt).Hubraum = Hubbtn.Text;
+                        ((PKWs)haupt).Schadstoffklasse = klassecombo.Text;
+                        haupt.Hersteller = PkwMarkenCombo.Text;
+                        break;
+                    case "LKW":
+                        haupt = new LKWs();
+                        ((LKWs)haupt).Anzahl_Der_Achsen = textBox4.Text;
+                        ((LKWs)haupt).Zuladung = textBox5.Text;
+                        haupt.Hersteller = LKWMarkenCombo.Text;
+                        break;
+                    case "Motorrad":
+                        haupt = new Motorräder();
+                        ((Motorräder)haupt).Hubraum = Hubbtn.Text;
+                        haupt.Hersteller = MotoMarkenCombo.Text;
+                        break;
 
+                      
+                }
+                haupt.Modell = textBox2.Text;
+                haupt.Kennzeichen = maskedkenn.Text;
+                haupt.Jahr_Der_Erstzulassung = Jahrcombo.Text;
+                haupt.Preis = textBox3.Text;
+                haupt.FahrzeugTyp = comboBoxFahrzeugtyp.Text;
             }
-            catch (Exception )
+            catch (Exception)
             {
 
-               
+
             }
         }
-    
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
        
+
+        private void SchuldenBtn_Click(object sender, EventArgs e)
+        {
+
+            if (comboBoxFahrzeugtyp.Text == "PKW")
+            {
+                // Schuldenbox.Text = textBox8.Text / 100 * 10 * klassecombo.Text;
+
+            }
+            else if (comboBoxFahrzeugtyp.Text == "LKW")
+            {
+                // Schuldenbox.Text = textBox5.Text * 100 
+            }
+            else if (comboBoxFahrzeugtyp.Text == "Motorrad")
+            {
+                Schuldenbox.Text = Convert.ToDecimal(textBox8.Text).ToString() + 200;
+            }
+        }
     }
 }

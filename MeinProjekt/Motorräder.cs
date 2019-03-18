@@ -8,21 +8,15 @@ namespace MeinProjekt
 {
     public class Motorräder : Fahrzeug
     {
-        private double hubraum;
+        private string hubraum;
 
-        public double Hubraum
+        public string Hubraum
         {
             get { return hubraum; }
             set { hubraum = value; }
         }
 
-        private string steuer_berechnen;
-
-        public string Steuer_Berechnen
-        {
-            get { return steuer_berechnen; }
-            set { steuer_berechnen = value; }
-        }
+      
 
 
 

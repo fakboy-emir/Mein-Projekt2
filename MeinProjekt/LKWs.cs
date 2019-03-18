@@ -8,30 +8,23 @@ namespace MeinProjekt
 {
     public class LKWs : Fahrzeug
     {
-        private double anzahl_der_achsen;
+        private string anzahl_der_achsen;
 
-        public double Anzahl_Der_Achsen
+        public string Anzahl_Der_Achsen
         {
             get { return anzahl_der_achsen; }
             set { anzahl_der_achsen = value; }
         }
 
-        private double zuladung;
+        private string zuladung;
 
-        public double Zuladung
+        public string Zuladung
         {
             get { return zuladung; }
             set { zuladung = value; }
         }
 
-        private string steuer_berechnen;
-
-        public string Steuer_Berechnen
-        {
-            get { return steuer_berechnen; }
-            set { steuer_berechnen = value; }
-        }
-
+      
 
 
 

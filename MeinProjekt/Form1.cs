@@ -14,39 +14,38 @@ namespace MeinProjekt
 {
     public partial class Form1 : Form
     {
-
-        public List<FahrzeugHinzufügen> fahrzeug
+        public List<Fahrzeug> fahrzeug
         {
-            get { return fahrzeug; }
-            set { fahrzeug = value; }
+            get;
+            set;
         }
 
-     
+
 
         public Form1()
         {
             InitializeComponent();
             Fahrzeugliste.DisplayMember = "Kennzeichen";
             this.tableLayoutPanel2.Visible = false;
-            
+
         }
 
 
-        private void BtnClick(object sender, EventArgs e)
+        public void BtnClick(object sender, EventArgs e)
         {
-          
+
 
             using (FahrzeugHinzufügen hinzufügen = new FahrzeugHinzufügen())
             {
-             
+
 
                 hinzufügen.ShowDialog();
 
-                
+
                 Fahrzeugliste.Items.Add(hinzufügen.haupt);
-                fahrzeug.Add(hinzufügen);
+                fahrzeug.Add(hinzufügen.haupt);
             }
-            this.Close();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,7 +55,7 @@ namespace MeinProjekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-           if(Fahrzeugliste.SelectedIndex != -1)
+            if (Fahrzeugliste.SelectedIndex != -1)
             {
                 Fahrzeugliste.Items.RemoveAt(Fahrzeugliste.SelectedIndex);
             }
@@ -84,7 +83,7 @@ namespace MeinProjekt
         }
         public void Laden()
         {
-           
+
         }
 
 
@@ -96,24 +95,12 @@ namespace MeinProjekt
             Fahrzeugliste.EndUpdate();
         }
 
-        private void berechnenbtn_Click(object sender, EventArgs e)
-        {
-            if (Fahrzeugliste.Items != null)
-            {
-                FahrzeugHinzufügen openForm = new FahrzeugHinzufügen();
-                openForm.Show();
-            }
-            else
-            {
-                MessageBox.Show("Sie müssen erst ein Fahrzeug Hinzufügen");
-            }
-            
-        }
+        
 
         private void ausgebenBtn_Click(object sender, EventArgs e)
         {
             tableLayoutPanel2.Visible = true;
-            Laden();
+            
         }
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -121,9 +108,6 @@ namespace MeinProjekt
 
         }
 
-        private void Fahrzeugliste_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Fahrzeugliste.SelectedItem = textBox1.Text;
-        }
+
     }
 }

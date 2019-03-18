@@ -56,14 +56,7 @@ namespace MeinProjekt
             set { fahrzeugtyp = value; }
         }
 
-        private string steuerberechnen;
-
-        public string SteuerBerechnen
-        {
-            get { return steuerberechnen; }
-            set { steuerberechnen = value; }
-        }
-
+     
     
 
 

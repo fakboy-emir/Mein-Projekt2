@@ -32,11 +32,11 @@
             this.LöschenBtn = new System.Windows.Forms.Button();
             this.Suchenbtn = new System.Windows.Forms.Button();
             this.ausgebenBtn = new System.Windows.Forms.Button();
-            this.Berechnenbtn = new System.Windows.Forms.Button();
             this.ZuweisenBtn = new System.Windows.Forms.Button();
             this.listlbl = new System.Windows.Forms.Label();
             this.Fahrzeugliste = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.Zuladunglbl = new System.Windows.Forms.Label();
             this.Achsenlbl = new System.Windows.Forms.Label();
             this.Preislbl = new System.Windows.Forms.Label();
@@ -58,7 +58,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,19 +100,9 @@
             this.ausgebenBtn.UseVisualStyleBackColor = true;
             this.ausgebenBtn.Click += new System.EventHandler(this.ausgebenBtn_Click);
             // 
-            // Berechnenbtn
-            // 
-            this.Berechnenbtn.Location = new System.Drawing.Point(186, 494);
-            this.Berechnenbtn.Name = "Berechnenbtn";
-            this.Berechnenbtn.Size = new System.Drawing.Size(154, 44);
-            this.Berechnenbtn.TabIndex = 3;
-            this.Berechnenbtn.Text = "Berechnen";
-            this.Berechnenbtn.UseVisualStyleBackColor = true;
-            this.Berechnenbtn.Click += new System.EventHandler(this.berechnenbtn_Click);
-            // 
             // ZuweisenBtn
             // 
-            this.ZuweisenBtn.Location = new System.Drawing.Point(364, 494);
+            this.ZuweisenBtn.Location = new System.Drawing.Point(186, 494);
             this.ZuweisenBtn.Name = "ZuweisenBtn";
             this.ZuweisenBtn.Size = new System.Drawing.Size(135, 44);
             this.ZuweisenBtn.TabIndex = 6;
@@ -138,7 +127,6 @@
             this.Fahrzeugliste.Name = "Fahrzeugliste";
             this.Fahrzeugliste.Size = new System.Drawing.Size(502, 308);
             this.Fahrzeugliste.TabIndex = 7;
-            this.Fahrzeugliste.SelectedIndexChanged += new System.EventHandler(this.Fahrzeugliste_SelectedIndexChanged);
             this.Fahrzeugliste.DoubleClick += new System.EventHandler(this.Fahrzeugliste_DoubleClick);
             // 
             // tableLayoutPanel2
@@ -197,6 +185,15 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(366, 509);
             this.tableLayoutPanel2.TabIndex = 8;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(182, 127);
+            this.maskedTextBox1.Mask = "K-LL-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(121, 22);
+            this.maskedTextBox1.TabIndex = 9;
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // Zuladunglbl
             // 
@@ -367,15 +364,6 @@
             this.textBox10.Size = new System.Drawing.Size(121, 22);
             this.textBox10.TabIndex = 14;
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(182, 127);
-            this.maskedTextBox1.Mask = "K-LL-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(121, 22);
-            this.maskedTextBox1.TabIndex = 9;
-            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -385,7 +373,6 @@
             this.Controls.Add(this.listlbl);
             this.Controls.Add(this.Fahrzeugliste);
             this.Controls.Add(this.ZuweisenBtn);
-            this.Controls.Add(this.Berechnenbtn);
             this.Controls.Add(this.ausgebenBtn);
             this.Controls.Add(this.Suchenbtn);
             this.Controls.Add(this.LöschenBtn);
@@ -405,7 +392,6 @@
         private System.Windows.Forms.Button LöschenBtn;
         private System.Windows.Forms.Button Suchenbtn;
         private System.Windows.Forms.Button ausgebenBtn;
-        private System.Windows.Forms.Button Berechnenbtn;
         private System.Windows.Forms.Button ZuweisenBtn;
         private System.Windows.Forms.Label listlbl;
         private System.Windows.Forms.ListBox Fahrzeugliste;

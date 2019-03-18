@@ -9,36 +9,28 @@ namespace MeinProjekt
     public class PKWs : Fahrzeug
     {
 
-        private double hubraum;
+        private string hubraum;
 
-        public double Hubraum
+        public string Hubraum
         {
             get { return hubraum; }
             set { hubraum = value; }
         }
 
-        private double leistung;
+        private string leistung;
 
-        public double Leistung
+        public string Leistung
         {
             get { return leistung; }
             set { leistung = value; }
         }
 
-        private double schadstoffklasse;
+        private string schadstoffklasse;
 
-        public double Schadstoffklasse
+        public string Schadstoffklasse
         {
             get { return schadstoffklasse; }
             set { schadstoffklasse = value; }
-        }
-
-        private string steuer_berechnen;
-
-        public string Steuer_Berechnen
-        {
-            get { return steuer_berechnen; }
-            set { steuer_berechnen = value; }
         }
 
 

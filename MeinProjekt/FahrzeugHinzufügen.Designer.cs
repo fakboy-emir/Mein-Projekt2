@@ -30,6 +30,7 @@
         {
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.maskedkenn = new System.Windows.Forms.MaskedTextBox();
             this.klassecombo = new System.Windows.Forms.ComboBox();
             this.Zuladunglbl = new System.Windows.Forms.Label();
             this.Achsenlbl = new System.Windows.Forms.Label();
@@ -45,21 +46,24 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.Jahrcombo = new System.Windows.Forms.ComboBox();
             this.Hubbtn = new System.Windows.Forms.TextBox();
             this.Hubraumlbl = new System.Windows.Forms.Label();
             this.Leistunglbl = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.PkwMarkenCombo = new System.Windows.Forms.ComboBox();
             this.LKWMarkenCombo = new System.Windows.Forms.ComboBox();
             this.MotoMarkenCombo = new System.Windows.Forms.ComboBox();
             this.Steuernlbl = new System.Windows.Forms.Label();
-            this.maskedkenn = new System.Windows.Forms.MaskedTextBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.Schuldenbox = new System.Windows.Forms.TextBox();
+            this.SchuldenBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -86,6 +90,7 @@
             this.tableLayoutPanel1.Controls.Add(this.Achsenlbl, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.Preislbl, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.Jahrlbl, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.textBox8, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxFahrzeugtyp, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.Typlbl7, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Herstellerlbl, 0, 1);
@@ -96,12 +101,11 @@
             this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.textBox8, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.Jahrcombo, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Hubbtn, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.Hubraumlbl, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.Leistunglbl, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Hubbtn, 1, 9);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Black;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(149, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -123,6 +127,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(355, 513);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // maskedkenn
+            // 
+            this.maskedkenn.Location = new System.Drawing.Point(176, 131);
+            this.maskedkenn.Mask = "K-LL-0000";
+            this.maskedkenn.Name = "maskedkenn";
+            this.maskedkenn.Size = new System.Drawing.Size(121, 22);
+            this.maskedkenn.TabIndex = 10;
             // 
             // klassecombo
             // 
@@ -259,19 +271,12 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(121, 22);
             this.textBox4.TabIndex = 7;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(176, 310);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(121, 22);
-            this.textBox5.TabIndex = 8;
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(176, 397);
+            this.textBox8.Location = new System.Drawing.Point(176, 354);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(121, 22);
             this.textBox8.TabIndex = 10;
@@ -318,7 +323,7 @@
             // 
             // Hubbtn
             // 
-            this.Hubbtn.Location = new System.Drawing.Point(176, 354);
+            this.Hubbtn.Location = new System.Drawing.Point(176, 397);
             this.Hubbtn.Name = "Hubbtn";
             this.Hubbtn.Size = new System.Drawing.Size(121, 22);
             this.Hubbtn.TabIndex = 9;
@@ -341,6 +346,14 @@
             this.Leistunglbl.Size = new System.Drawing.Size(62, 17);
             this.Leistunglbl.TabIndex = 9;
             this.Leistunglbl.Text = "Leistung";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(176, 310);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(121, 22);
+            this.textBox5.TabIndex = 8;
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // SaveBtn
             // 
@@ -425,26 +438,51 @@
             // Steuernlbl
             // 
             this.Steuernlbl.AutoSize = true;
-            this.Steuernlbl.Location = new System.Drawing.Point(659, 293);
+            this.Steuernlbl.Location = new System.Drawing.Point(3, 0);
             this.Steuernlbl.Name = "Steuernlbl";
             this.Steuernlbl.Size = new System.Drawing.Size(86, 17);
             this.Steuernlbl.TabIndex = 5;
             this.Steuernlbl.Text = "Ihre Steuern";
             // 
-            // maskedkenn
+            // tableLayoutPanel2
             // 
-            this.maskedkenn.Location = new System.Drawing.Point(176, 131);
-            this.maskedkenn.Mask = "K-LL-0000";
-            this.maskedkenn.Name = "maskedkenn";
-            this.maskedkenn.Size = new System.Drawing.Size(121, 22);
-            this.maskedkenn.TabIndex = 10;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.Schuldenbox, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Steuernlbl, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.SchuldenBtn, 0, 1);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(567, 13);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel2.TabIndex = 6;
+            // 
+            // Schuldenbox
+            // 
+            this.Schuldenbox.Location = new System.Drawing.Point(103, 3);
+            this.Schuldenbox.Name = "Schuldenbox";
+            this.Schuldenbox.Size = new System.Drawing.Size(94, 22);
+            this.Schuldenbox.TabIndex = 7;
+            // 
+            // SchuldenBtn
+            // 
+            this.SchuldenBtn.Location = new System.Drawing.Point(3, 53);
+            this.SchuldenBtn.Name = "SchuldenBtn";
+            this.SchuldenBtn.Size = new System.Drawing.Size(75, 23);
+            this.SchuldenBtn.TabIndex = 8;
+            this.SchuldenBtn.Text = "Schulden Berechnen";
+            this.SchuldenBtn.UseVisualStyleBackColor = true;
+            this.SchuldenBtn.Click += new System.EventHandler(this.SchuldenBtn_Click);
             // 
             // FahrzeugHinzufügen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 556);
-            this.Controls.Add(this.Steuernlbl);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.MotoMarkenCombo);
             this.Controls.Add(this.LKWMarkenCombo);
             this.Controls.Add(this.PkwMarkenCombo);
@@ -456,8 +494,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -493,5 +532,8 @@
         private System.Windows.Forms.ComboBox MotoMarkenCombo;
         private System.Windows.Forms.Label Steuernlbl;
         private System.Windows.Forms.MaskedTextBox maskedkenn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TextBox Schuldenbox;
+        private System.Windows.Forms.Button SchuldenBtn;
     }
 }
