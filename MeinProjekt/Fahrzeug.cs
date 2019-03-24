@@ -55,9 +55,12 @@ namespace MeinProjekt
             get { return fahrzeugtyp; }
             set { fahrzeugtyp = value; }
         }
+        public abstract float Steuerschuld
+        {
+            get;
+        }
 
-     
-    
+
 
 
 

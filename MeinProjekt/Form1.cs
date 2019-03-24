@@ -14,18 +14,14 @@ namespace MeinProjekt
 {
     public partial class Form1 : Form
     {
-        public List<Fahrzeug> fahrzeug
-        {
-            get;
-            set;
-        }
+        public List<Fahrzeug> fahrzeug = new List<Fahrzeug>();
 
 
 
         public Form1()
         {
             InitializeComponent();
-            Fahrzeugliste.DisplayMember = "Kennzeichen";
+            Fahrzeugliste.DisplayMember = "PKW";
             this.tableLayoutPanel2.Visible = false;
 
         }
@@ -35,23 +31,62 @@ namespace MeinProjekt
         {
 
 
-            using (FahrzeugHinzufügen hinzufügen = new FahrzeugHinzufügen())
+            using (Form2 hinzufügen = new Form2())
             {
 
 
                 hinzufügen.ShowDialog();
 
 
-                Fahrzeugliste.Items.Add(hinzufügen.haupt);
-                fahrzeug.Add(hinzufügen.haupt);
+                //Fahrzeugliste.Items.Add(hinzufügen.haupt);
+                //fahrzeug.Add(hinzufügen.haupt);
+                Form2 form = new Form2();
+                
+                if(form.FahrzeugTyp == "PKW")
+                {
+                    fahrzeug.Add(new PKWs());
+                    fahrzeug[fahrzeug.Count - 1].FahrzeugTyp = "PKW";
+                    fahrzeug[fahrzeug.Count - 1].Modell = hinzufügen.Modell;
+                    fahrzeug[fahrzeug.Count - 1].Kennzeichen = hinzufügen.Kennzeichen;
+                    fahrzeug[fahrzeug.Count - 1].Jahr_Der_Erstzulassung = hinzufügen.Jahr_Der_Erstzulassung;
+                    fahrzeug[fahrzeug.Count - 1].Preis = hinzufügen.Preis;
+                    fahrzeug[fahrzeug.Count - 1].Hersteller = hinzufügen.PKWMarke;
+
+                   
+           
+
+                }
+                else if(form.FahrzeugTyp == "LKW")
+                {
+                    fahrzeug.Add(new LKWs());
+                    fahrzeug[fahrzeug.Count - 1].FahrzeugTyp = "LKW";
+                    fahrzeug[fahrzeug.Count - 1].Modell = hinzufügen.Modell;
+                    fahrzeug[fahrzeug.Count - 1].Kennzeichen = hinzufügen.Kennzeichen;
+                    fahrzeug[fahrzeug.Count - 1].Jahr_Der_Erstzulassung = hinzufügen.Jahr_Der_Erstzulassung;
+                    fahrzeug[fahrzeug.Count - 1].Preis = hinzufügen.Preis;
+                    fahrzeug[fahrzeug.Count - 1].Hersteller = hinzufügen.PKWMarke;
+                
+
+
+                }
+                else if (form.FahrzeugTyp == "Motorrad")
+                {
+                    fahrzeug.Add(new Motorräder());
+                    fahrzeug[fahrzeug.Count - 1].FahrzeugTyp = "LKW";
+                    fahrzeug[fahrzeug.Count - 1].Modell = hinzufügen.Modell;
+                    fahrzeug[fahrzeug.Count - 1].Kennzeichen = hinzufügen.Kennzeichen;
+                    fahrzeug[fahrzeug.Count - 1].Jahr_Der_Erstzulassung = hinzufügen.Jahr_Der_Erstzulassung;
+                    fahrzeug[fahrzeug.Count - 1].Preis = hinzufügen.Preis;
+                    fahrzeug[fahrzeug.Count - 1].Hersteller = hinzufügen.PKWMarke;
+                    
+          
+                }
+                Fahrzeugliste.Items.Add(fahrzeug);
             }
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -61,10 +96,7 @@ namespace MeinProjekt
             }
         }
 
-        private void listlbl_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         public void Speichern()
         {
@@ -87,26 +119,17 @@ namespace MeinProjekt
         }
 
 
-        private void Fahrzeugliste_DoubleClick(object sender, EventArgs e)
-        {
-            FahrzeugHinzufügen openForm = new FahrzeugHinzufügen();
-            openForm.Show();
-            Fahrzeugliste.BeginUpdate();
-            Fahrzeugliste.EndUpdate();
-        }
-
+      
         
 
         private void ausgebenBtn_Click(object sender, EventArgs e)
         {
+            
             tableLayoutPanel2.Visible = true;
             
         }
 
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
+       
 
 
     }

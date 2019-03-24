@@ -117,7 +117,6 @@
             this.listlbl.Size = new System.Drawing.Size(135, 17);
             this.listlbl.TabIndex = 0;
             this.listlbl.Text = "Meine Fahrzeugliste";
-            this.listlbl.Click += new System.EventHandler(this.listlbl_Click);
             // 
             // Fahrzeugliste
             // 
@@ -127,7 +126,6 @@
             this.Fahrzeugliste.Name = "Fahrzeugliste";
             this.Fahrzeugliste.Size = new System.Drawing.Size(502, 308);
             this.Fahrzeugliste.TabIndex = 7;
-            this.Fahrzeugliste.DoubleClick += new System.EventHandler(this.Fahrzeugliste_DoubleClick);
             // 
             // tableLayoutPanel2
             // 
@@ -193,7 +191,6 @@
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(121, 22);
             this.maskedTextBox1.TabIndex = 9;
-            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // Zuladunglbl
             // 
@@ -379,7 +376,6 @@
             this.Controls.Add(this.fügenBtn);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);

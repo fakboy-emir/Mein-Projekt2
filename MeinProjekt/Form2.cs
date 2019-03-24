@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace MeinProjekt
 {
-    public partial class FahrzeugHinzufügen : Form
+    public partial class Form2 : Form
     {
-        public Fahrzeug haupt { get; set; }
+        public Fahrzeug fahrzeug { get; set; }
 
-        public FahrzeugHinzufügen()
+        public Form2()
         {
             InitializeComponent();
 
@@ -236,34 +236,46 @@ namespace MeinProjekt
             try
             {
 
-                switch (comboBoxFahrzeugtyp.Text)
-                {
-                    case "PKW":
-                        haupt = new PKWs();
-                        ((PKWs)haupt).Leistung = textBox8.Text;
-                        ((PKWs)haupt).Hubraum = Hubbtn.Text;
-                        ((PKWs)haupt).Schadstoffklasse = klassecombo.Text;
-                        haupt.Hersteller = PkwMarkenCombo.Text;
-                        break;
-                    case "LKW":
-                        haupt = new LKWs();
-                        ((LKWs)haupt).Anzahl_Der_Achsen = textBox4.Text;
-                        ((LKWs)haupt).Zuladung = textBox5.Text;
-                        haupt.Hersteller = LKWMarkenCombo.Text;
-                        break;
-                    case "Motorrad":
-                        haupt = new Motorräder();
-                        ((Motorräder)haupt).Hubraum = Hubbtn.Text;
-                        haupt.Hersteller = MotoMarkenCombo.Text;
-                        break;
+               if (fahrzeug.FahrzeugTyp == "PKW")
+               {
+                    ((PKWs)fahrzeug).Leistung = textBox8.Text;
+                    ((PKWs)fahrzeug).Hubraum = Hubbtn.Text;
+                    ((PKWs)fahrzeug).Schadstoffklasse = klassecombo.Text;
 
-                      
-                }
-                haupt.Modell = textBox2.Text;
-                haupt.Kennzeichen = maskedkenn.Text;
-                haupt.Jahr_Der_Erstzulassung = Jahrcombo.Text;
-                haupt.Preis = textBox3.Text;
-                haupt.FahrzeugTyp = comboBoxFahrzeugtyp.Text;
+                    fahrzeug.Hersteller = PkwMarkenCombo.Text;
+                    fahrzeug.Modell = textBox2.Text;
+                    fahrzeug.Kennzeichen = maskedkenn.Text;
+                    fahrzeug.Jahr_Der_Erstzulassung = Jahrcombo.Text;
+                    fahrzeug.Preis = textBox3.Text;
+                    fahrzeug.FahrzeugTyp = comboBoxFahrzeugtyp.Text;
+               }
+               else if (fahrzeug.FahrzeugTyp == "LKW")
+               {
+                    fahrzeug = new LKWs();
+                    ((LKWs)fahrzeug).Anzahl_Der_Achsen = textBox4.Text;
+                    ((LKWs)fahrzeug).Zuladung = textBox5.Text;
+
+                    fahrzeug.Hersteller = LKWMarkenCombo.Text;
+                    fahrzeug.Modell = textBox2.Text;
+                    fahrzeug.Kennzeichen = maskedkenn.Text;
+                    fahrzeug.Jahr_Der_Erstzulassung = Jahrcombo.Text;
+                    fahrzeug.Preis = textBox3.Text;
+                    fahrzeug.FahrzeugTyp = comboBoxFahrzeugtyp.Text;
+               }
+               else if (fahrzeug.FahrzeugTyp == "Motorrad")
+               {
+                    fahrzeug = new Motorräder();
+                    ((Motorräder)fahrzeug).Hubraum = Hubbtn.Text;
+                    fahrzeug.Hersteller = MotoMarkenCombo.Text;
+
+                    fahrzeug.Modell = textBox2.Text;
+                    fahrzeug.Kennzeichen = maskedkenn.Text;
+                    fahrzeug.Jahr_Der_Erstzulassung = Jahrcombo.Text;
+                    fahrzeug.Preis = textBox3.Text;
+                    fahrzeug.FahrzeugTyp = comboBoxFahrzeugtyp.Text;
+               }
+
+
             }
             catch (Exception)
             {
@@ -272,29 +284,90 @@ namespace MeinProjekt
             }
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        public string FahrzeugTyp
         {
+            get { return comboBoxFahrzeugtyp.Text; }
+        }
+        public string  LKWMarke
+        {
+            get { return LKWMarkenCombo.Text; }
+          
+        }
+        public string PKWMarke
+        {
+            get { return PkwMarkenCombo.Text; }
 
         }
+        public string MotoMarke
+        {
+            get { return MotoMarkenCombo.Text; }
 
-       
+        }
+        public string Modell
+        {
+            get { return textBox2.Text; }
+        }
+        public string Kennzeichen
+        {
+            get { return maskedkenn.Text; }
+        }
+        public string Jahr_Der_Erstzulassung
+        {
+            get { return Jahrcombo.Text; }
+        }
+        public string Preis
+        {
+            get { return textBox3.Text; }
+        }
+        public string Anzahl_Der_Achsen
+        {
+            get { return textBox4.Text; }
+        }
+        public string Zuladung
+        {
+            get { return textBox5.Text; }
+        }
+        public string Leistung
+        {
+            get { return textBox8.Text; }
+        }
+        public string Hubraum
+        {
+            get { return Hubbtn.Text; }
+        }
+        public string Schadstoffklasse
+        {
+            get { return klassecombo.Text; }
+        }
+      
+
+        private double Ergebnis
+        {
+            get;
+            set;
+        }
+
 
         private void SchuldenBtn_Click(object sender, EventArgs e)
         {
-
-            if (comboBoxFahrzeugtyp.Text == "PKW")
+            if(comboBoxFahrzeugtyp.Text == "PKW")
             {
-                // Schuldenbox.Text = textBox8.Text / 100 * 10 * klassecombo.Text;
-
+                
+                Ergebnis = Convert.ToDouble(Hubbtn.Text) + (99 / 100 * 10 * Convert.ToDouble(klassecombo.Text) + 1);
+                Schuldenbox.Text = Convert.ToString(Ergebnis);
             }
             else if (comboBoxFahrzeugtyp.Text == "LKW")
             {
-                // Schuldenbox.Text = textBox5.Text * 100 
+                Ergebnis = Convert.ToDouble(textBox5.Text);
+                Schuldenbox.Text = Convert.ToString(Ergebnis);
             }
             else if (comboBoxFahrzeugtyp.Text == "Motorrad")
             {
-                Schuldenbox.Text = Convert.ToDecimal(textBox8.Text).ToString() + 200;
+                Ergebnis = Convert.ToDouble(Hubbtn.Text) + 99 / 100 * 20;
+                Schuldenbox.Text = Convert.ToString(Ergebnis);
             }
         }
+
+       
     }
 }

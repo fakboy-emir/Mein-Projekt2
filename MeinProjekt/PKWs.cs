@@ -33,6 +33,14 @@ namespace MeinProjekt
             set { schadstoffklasse = value; }
         }
 
+        private string pkwMarke;
 
+        public string PKWMarke
+        {
+            get { return pkwMarke; }
+            set { pkwMarke = value; }
+        }
+
+        public override float Steuerschuld => throw new NotImplementedException();
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace MeinProjekt
 {
-    partial class FahrzeugHinzufügen
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,7 @@
             this.Achsenlbl = new System.Windows.Forms.Label();
             this.Preislbl = new System.Windows.Forms.Label();
             this.Jahrlbl = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.comboBoxFahrzeugtyp = new System.Windows.Forms.ComboBox();
             this.Typlbl7 = new System.Windows.Forms.Label();
             this.Herstellerlbl = new System.Windows.Forms.Label();
@@ -46,12 +47,11 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.Jahrcombo = new System.Windows.Forms.ComboBox();
-            this.Hubbtn = new System.Windows.Forms.TextBox();
             this.Hubraumlbl = new System.Windows.Forms.Label();
             this.Leistunglbl = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Hubbtn = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.PkwMarkenCombo = new System.Windows.Forms.ComboBox();
@@ -184,6 +184,14 @@
             this.Jahrlbl.TabIndex = 5;
             this.Jahrlbl.Text = "Jahr";
             // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(176, 354);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(121, 22);
+            this.textBox8.TabIndex = 10;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
+            // 
             // comboBoxFahrzeugtyp
             // 
             this.comboBoxFahrzeugtyp.FormattingEnabled = true;
@@ -271,16 +279,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(121, 22);
             this.textBox4.TabIndex = 7;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(176, 354);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(121, 22);
-            this.textBox8.TabIndex = 10;
-            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // Jahrcombo
             // 
@@ -321,14 +320,6 @@
             this.Jahrcombo.Size = new System.Drawing.Size(121, 24);
             this.Jahrcombo.TabIndex = 5;
             // 
-            // Hubbtn
-            // 
-            this.Hubbtn.Location = new System.Drawing.Point(176, 397);
-            this.Hubbtn.Name = "Hubbtn";
-            this.Hubbtn.Size = new System.Drawing.Size(121, 22);
-            this.Hubbtn.TabIndex = 9;
-            this.Hubbtn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Hubbtn_KeyPress);
-            // 
             // Hubraumlbl
             // 
             this.Hubraumlbl.AutoSize = true;
@@ -354,6 +345,14 @@
             this.textBox5.Size = new System.Drawing.Size(121, 22);
             this.textBox5.TabIndex = 8;
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
+            // 
+            // Hubbtn
+            // 
+            this.Hubbtn.Location = new System.Drawing.Point(176, 397);
+            this.Hubbtn.Name = "Hubbtn";
+            this.Hubbtn.Size = new System.Drawing.Size(121, 22);
+            this.Hubbtn.TabIndex = 9;
+            this.Hubbtn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Hubbtn_KeyPress);
             // 
             // SaveBtn
             // 
@@ -477,7 +476,7 @@
             this.SchuldenBtn.UseVisualStyleBackColor = true;
             this.SchuldenBtn.Click += new System.EventHandler(this.SchuldenBtn_Click);
             // 
-            // FahrzeugHinzufügen
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -488,9 +487,10 @@
             this.Controls.Add(this.PkwMarkenCombo);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "FahrzeugHinzufügen";
+            this.Name = "Form2";
             this.Text = "AddCar";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FahrzeugHinzufügen_FormClosing);
+         
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

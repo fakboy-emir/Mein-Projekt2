@@ -23,11 +23,14 @@ namespace MeinProjekt
             get { return zuladung; }
             set { zuladung = value; }
         }
+        private string lkwMarke;
 
-      
+        public string LKWMarke
+        {
+            get { return lkwMarke; }
+            set { lkwMarke = value; }
+        }
 
-
-
-
+        public override float Steuerschuld => throw new NotImplementedException();
     }
 }

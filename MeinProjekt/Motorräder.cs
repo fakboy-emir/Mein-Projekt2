@@ -16,9 +16,15 @@ namespace MeinProjekt
             set { hubraum = value; }
         }
 
-      
 
+        private string motoMarke;
 
+        public string MotoMarke
+        {
+            get { return motoMarke; }
+            set { motoMarke = value; }
+        }
 
+        public override float Steuerschuld => throw new NotImplementedException();
     }
 }
