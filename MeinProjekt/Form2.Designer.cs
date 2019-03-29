@@ -36,34 +36,29 @@
             this.Achsenlbl = new System.Windows.Forms.Label();
             this.Preislbl = new System.Windows.Forms.Label();
             this.Jahrlbl = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.LeistungText = new System.Windows.Forms.TextBox();
             this.comboBoxFahrzeugtyp = new System.Windows.Forms.ComboBox();
             this.Typlbl7 = new System.Windows.Forms.Label();
             this.Herstellerlbl = new System.Windows.Forms.Label();
             this.Klasselbl = new System.Windows.Forms.Label();
             this.Modelllbl = new System.Windows.Forms.Label();
             this.Kennzeichenlbl = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.HerstellerText = new System.Windows.Forms.TextBox();
+            this.ModellText = new System.Windows.Forms.TextBox();
+            this.PreisText = new System.Windows.Forms.TextBox();
+            this.AchsenText = new System.Windows.Forms.TextBox();
             this.Jahrcombo = new System.Windows.Forms.ComboBox();
             this.Hubraumlbl = new System.Windows.Forms.Label();
             this.Leistunglbl = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.Hubbtn = new System.Windows.Forms.TextBox();
+            this.ZuladungText = new System.Windows.Forms.TextBox();
+            this.HubraumText = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.PkwMarkenCombo = new System.Windows.Forms.ComboBox();
             this.LKWMarkenCombo = new System.Windows.Forms.ComboBox();
             this.MotoMarkenCombo = new System.Windows.Forms.ComboBox();
-            this.Steuernlbl = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.Schuldenbox = new System.Windows.Forms.TextBox();
-            this.SchuldenBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -90,22 +85,22 @@
             this.tableLayoutPanel1.Controls.Add(this.Achsenlbl, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.Preislbl, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.Jahrlbl, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.textBox8, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.LeistungText, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxFahrzeugtyp, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.Typlbl7, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Herstellerlbl, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.Klasselbl, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.Modelllbl, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.Kennzeichenlbl, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.HerstellerText, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ModellText, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.PreisText, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.AchsenText, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.Jahrcombo, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.Hubraumlbl, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.Leistunglbl, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Hubbtn, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.ZuladungText, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.HubraumText, 1, 9);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Black;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(149, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -140,9 +135,9 @@
             // 
             this.klassecombo.FormattingEnabled = true;
             this.klassecombo.Items.AddRange(new object[] {
-            "-1",
             "0",
-            "+1"});
+            "1",
+            "2"});
             this.klassecombo.Location = new System.Drawing.Point(176, 448);
             this.klassecombo.Name = "klassecombo";
             this.klassecombo.Size = new System.Drawing.Size(121, 24);
@@ -184,13 +179,13 @@
             this.Jahrlbl.TabIndex = 5;
             this.Jahrlbl.Text = "Jahr";
             // 
-            // textBox8
+            // LeistungText
             // 
-            this.textBox8.Location = new System.Drawing.Point(176, 354);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(121, 22);
-            this.textBox8.TabIndex = 10;
-            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
+            this.LeistungText.Location = new System.Drawing.Point(176, 354);
+            this.LeistungText.Name = "LeistungText";
+            this.LeistungText.Size = new System.Drawing.Size(121, 22);
+            this.LeistungText.TabIndex = 10;
+            this.LeistungText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // comboBoxFahrzeugtyp
             // 
@@ -250,36 +245,37 @@
             this.Kennzeichenlbl.TabIndex = 4;
             this.Kennzeichenlbl.Text = "Kennzeichen";
             // 
-            // textBox1
+            // HerstellerText
             // 
-            this.textBox1.Location = new System.Drawing.Point(176, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 2;
+            this.HerstellerText.Location = new System.Drawing.Point(176, 38);
+            this.HerstellerText.Name = "HerstellerText";
+            this.HerstellerText.Size = new System.Drawing.Size(121, 22);
+            this.HerstellerText.TabIndex = 2;
+            this.HerstellerText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // ModellText
             // 
-            this.textBox2.Location = new System.Drawing.Point(176, 79);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 22);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.ModellText.Location = new System.Drawing.Point(176, 79);
+            this.ModellText.Name = "ModellText";
+            this.ModellText.Size = new System.Drawing.Size(161, 22);
+            this.ModellText.TabIndex = 3;
+            this.ModellText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
-            // textBox3
+            // PreisText
             // 
-            this.textBox3.Location = new System.Drawing.Point(176, 219);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 22);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.PreisText.Location = new System.Drawing.Point(176, 219);
+            this.PreisText.Name = "PreisText";
+            this.PreisText.Size = new System.Drawing.Size(121, 22);
+            this.PreisText.TabIndex = 6;
+            this.PreisText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
-            // textBox4
+            // AchsenText
             // 
-            this.textBox4.Location = new System.Drawing.Point(176, 265);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 22);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            this.AchsenText.Location = new System.Drawing.Point(176, 265);
+            this.AchsenText.Name = "AchsenText";
+            this.AchsenText.Size = new System.Drawing.Size(121, 22);
+            this.AchsenText.TabIndex = 7;
+            this.AchsenText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // Jahrcombo
             // 
@@ -338,21 +334,21 @@
             this.Leistunglbl.TabIndex = 9;
             this.Leistunglbl.Text = "Leistung";
             // 
-            // textBox5
+            // ZuladungText
             // 
-            this.textBox5.Location = new System.Drawing.Point(176, 310);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(121, 22);
-            this.textBox5.TabIndex = 8;
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
+            this.ZuladungText.Location = new System.Drawing.Point(176, 310);
+            this.ZuladungText.Name = "ZuladungText";
+            this.ZuladungText.Size = new System.Drawing.Size(121, 22);
+            this.ZuladungText.TabIndex = 8;
+            this.ZuladungText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
-            // Hubbtn
+            // HubraumText
             // 
-            this.Hubbtn.Location = new System.Drawing.Point(176, 397);
-            this.Hubbtn.Name = "Hubbtn";
-            this.Hubbtn.Size = new System.Drawing.Size(121, 22);
-            this.Hubbtn.TabIndex = 9;
-            this.Hubbtn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Hubbtn_KeyPress);
+            this.HubraumText.Location = new System.Drawing.Point(176, 397);
+            this.HubraumText.Name = "HubraumText";
+            this.HubraumText.Size = new System.Drawing.Size(121, 22);
+            this.HubraumText.TabIndex = 9;
+            this.HubraumText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Hubbtn_KeyPress);
             // 
             // SaveBtn
             // 
@@ -434,54 +430,11 @@
             this.MotoMarkenCombo.TabIndex = 4;
             this.MotoMarkenCombo.SelectedIndexChanged += new System.EventHandler(this.MotoMarkenCombo_SelectedIndexChanged);
             // 
-            // Steuernlbl
-            // 
-            this.Steuernlbl.AutoSize = true;
-            this.Steuernlbl.Location = new System.Drawing.Point(3, 0);
-            this.Steuernlbl.Name = "Steuernlbl";
-            this.Steuernlbl.Size = new System.Drawing.Size(86, 17);
-            this.Steuernlbl.TabIndex = 5;
-            this.Steuernlbl.Text = "Ihre Steuern";
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.Schuldenbox, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Steuernlbl, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.SchuldenBtn, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(567, 13);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel2.TabIndex = 6;
-            // 
-            // Schuldenbox
-            // 
-            this.Schuldenbox.Location = new System.Drawing.Point(103, 3);
-            this.Schuldenbox.Name = "Schuldenbox";
-            this.Schuldenbox.Size = new System.Drawing.Size(94, 22);
-            this.Schuldenbox.TabIndex = 7;
-            // 
-            // SchuldenBtn
-            // 
-            this.SchuldenBtn.Location = new System.Drawing.Point(3, 53);
-            this.SchuldenBtn.Name = "SchuldenBtn";
-            this.SchuldenBtn.Size = new System.Drawing.Size(75, 23);
-            this.SchuldenBtn.TabIndex = 8;
-            this.SchuldenBtn.Text = "Schulden Berechnen";
-            this.SchuldenBtn.UseVisualStyleBackColor = true;
-            this.SchuldenBtn.Click += new System.EventHandler(this.SchuldenBtn_Click);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 556);
-            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.MotoMarkenCombo);
             this.Controls.Add(this.LKWMarkenCombo);
             this.Controls.Add(this.PkwMarkenCombo);
@@ -490,12 +443,9 @@
             this.Name = "Form2";
             this.Text = "AddCar";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FahrzeugHinzufügen_FormClosing);
-         
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -504,7 +454,7 @@
 
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Label Typlbl7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox HerstellerText;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ComboBox comboBoxFahrzeugtyp;
         private System.Windows.Forms.Label Herstellerlbl;
@@ -518,22 +468,18 @@
         private System.Windows.Forms.Label Hubraumlbl;
         private System.Windows.Forms.Label Zuladunglbl;
         private System.Windows.Forms.Label Klasselbl;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox Hubbtn;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox ModellText;
+        private System.Windows.Forms.TextBox PreisText;
+        private System.Windows.Forms.TextBox AchsenText;
+        private System.Windows.Forms.TextBox ZuladungText;
+        private System.Windows.Forms.TextBox HubraumText;
+        private System.Windows.Forms.TextBox LeistungText;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.ComboBox Jahrcombo;
         private System.Windows.Forms.ComboBox PkwMarkenCombo;
         private System.Windows.Forms.ComboBox LKWMarkenCombo;
         private System.Windows.Forms.ComboBox MotoMarkenCombo;
-        private System.Windows.Forms.Label Steuernlbl;
         private System.Windows.Forms.MaskedTextBox maskedkenn;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox Schuldenbox;
-        private System.Windows.Forms.Button SchuldenBtn;
     }
 }

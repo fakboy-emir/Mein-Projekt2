@@ -31,6 +31,6 @@ namespace MeinProjekt
             set { lkwMarke = value; }
         }
 
-        public override float Steuerschuld => throw new NotImplementedException();
+        public override double Steuerschuld => Convert.ToDouble(Zuladung) * 100;
     }
 }

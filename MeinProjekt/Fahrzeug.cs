@@ -8,14 +8,7 @@ namespace MeinProjekt
 {
     public abstract class Fahrzeug
     {
-        private string hersteller;
-
-        public string Hersteller
-        {
-            get { return hersteller; }
-            set { hersteller = value; }
-        }
-
+        
         private string modell;
 
         public string Modell
@@ -55,7 +48,7 @@ namespace MeinProjekt
             get { return fahrzeugtyp; }
             set { fahrzeugtyp = value; }
         }
-        public abstract float Steuerschuld
+        public virtual double Steuerschuld
         {
             get;
         }

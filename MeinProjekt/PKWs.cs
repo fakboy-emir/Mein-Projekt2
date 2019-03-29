@@ -9,12 +9,12 @@ namespace MeinProjekt
     public class PKWs : Fahrzeug
     {
 
-        private string hubraum;
+        private string phubraum;
 
-        public string Hubraum
+        public string PHubraum
         {
-            get { return hubraum; }
-            set { hubraum = value; }
+            get { return phubraum; }
+            set { phubraum = value; }
         }
 
         private string leistung;
@@ -41,6 +41,6 @@ namespace MeinProjekt
             set { pkwMarke = value; }
         }
 
-        public override float Steuerschuld => throw new NotImplementedException();
+        public override double Steuerschuld => (Convert.ToDouble(PHubraum) + 99) / 100 * 10 * (Convert.ToDouble(Schadstoffklasse) + 1);
     }
 }

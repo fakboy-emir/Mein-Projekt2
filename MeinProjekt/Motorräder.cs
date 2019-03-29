@@ -25,6 +25,6 @@ namespace MeinProjekt
             set { motoMarke = value; }
         }
 
-        public override float Steuerschuld => throw new NotImplementedException();
+        public override double Steuerschuld => (Convert.ToDouble(Hubraum) + 99) / 100 * 20;
     }
 }

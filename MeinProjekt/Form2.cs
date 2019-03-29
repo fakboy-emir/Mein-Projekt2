@@ -30,18 +30,18 @@ namespace MeinProjekt
         {
             if (comboBoxFahrzeugtyp.SelectedItem.ToString() == "PKW")
             {
-                Back_To_Place();//Hier bringe ich die Form auf 0
-                tableLayoutPanel1.Controls.Remove(Zuladunglbl);
-                tableLayoutPanel1.Controls.Remove(Hubbtn);
-                tableLayoutPanel1.Controls.Remove(textBox8);
+                Back_To_Place();//Hier bringe ich die Form auf 0                       
                 tableLayoutPanel1.Controls.Remove(Achsenlbl);
-                tableLayoutPanel1.Controls.Add(Hubraumlbl, 0, 6);
+                tableLayoutPanel1.Controls.Remove(Zuladunglbl);
+                tableLayoutPanel1.Controls.Remove(HerstellerText);
+                tableLayoutPanel1.Controls.Remove(AchsenText);
+                tableLayoutPanel1.Controls.Remove(ZuladungText);
+                tableLayoutPanel1.Controls.Add(Hubraumlbl, 0 , 6 );
+                tableLayoutPanel1.Controls.Add(HubraumText,1 , 6);
                 tableLayoutPanel1.Controls.Add(Leistunglbl, 0, 7);
+                tableLayoutPanel1.Controls.Add(LeistungText, 1, 7);
                 tableLayoutPanel1.Controls.Add(Klasselbl, 0, 8);
-                tableLayoutPanel1.Controls.Add(klassecombo, 1, 8);
-                tableLayoutPanel1.Controls.Remove(textBox1);
-                tableLayoutPanel1.Controls.Remove(LKWMarkenCombo);
-                tableLayoutPanel1.Controls.Remove(MotoMarkenCombo);
+                tableLayoutPanel1.Controls.Add(klassecombo,1 , 8);
                 tableLayoutPanel1.Controls.Add(PkwMarkenCombo, 1, 1);
                 this.PkwMarkenCombo.Visible = true;
                 this.SaveBtn.Visible = true;
@@ -53,10 +53,10 @@ namespace MeinProjekt
                 tableLayoutPanel1.Controls.Remove(Klasselbl);
                 tableLayoutPanel1.Controls.Remove(klassecombo);
                 tableLayoutPanel1.Controls.Remove(Leistunglbl);
-                tableLayoutPanel1.Controls.Remove(textBox8);
+                tableLayoutPanel1.Controls.Remove(LeistungText);
                 tableLayoutPanel1.Controls.Remove(Hubraumlbl);
-                tableLayoutPanel1.Controls.Remove(Hubbtn);
-                tableLayoutPanel1.Controls.Remove(textBox1);
+                tableLayoutPanel1.Controls.Remove(HubraumText);
+                tableLayoutPanel1.Controls.Remove(HerstellerText);
                 tableLayoutPanel1.Controls.Remove(PkwMarkenCombo);
                 tableLayoutPanel1.Controls.Remove(MotoMarkenCombo);
                 tableLayoutPanel1.Controls.Add(LKWMarkenCombo, 1, 1);
@@ -70,14 +70,14 @@ namespace MeinProjekt
                 tableLayoutPanel1.Controls.Remove(Klasselbl);
                 tableLayoutPanel1.Controls.Remove(klassecombo);
                 tableLayoutPanel1.Controls.Remove(Leistunglbl);
-                tableLayoutPanel1.Controls.Remove(textBox8);
+                tableLayoutPanel1.Controls.Remove(LeistungText);
                 tableLayoutPanel1.Controls.Remove(Zuladunglbl);
-                tableLayoutPanel1.Controls.Remove(textBox5);
+                tableLayoutPanel1.Controls.Remove(ZuladungText);
                 tableLayoutPanel1.Controls.Remove(Achsenlbl);
-                tableLayoutPanel1.Controls.Remove(textBox4);
+                tableLayoutPanel1.Controls.Remove(AchsenText);
                 tableLayoutPanel1.Controls.Add(Hubraumlbl, 0, 6);
-                tableLayoutPanel1.Controls.Add(Hubbtn, 1, 6);
-                tableLayoutPanel1.Controls.Remove(textBox1);
+                tableLayoutPanel1.Controls.Add(HubraumText, 1, 6);
+                tableLayoutPanel1.Controls.Remove(HerstellerText);
                 tableLayoutPanel1.Controls.Remove(PkwMarkenCombo);
                 tableLayoutPanel1.Controls.Remove(LKWMarkenCombo);
                 tableLayoutPanel1.Controls.Add(MotoMarkenCombo, 1, 1);
@@ -102,24 +102,25 @@ namespace MeinProjekt
             tableLayoutPanel1.Controls.Add(Preislbl, 0, 5);
             tableLayoutPanel1.Controls.Add(Achsenlbl, 0, 6);
             tableLayoutPanel1.Controls.Add(Zuladunglbl, 0, 7);
-            tableLayoutPanel1.Controls.Add(Hubraumlbl, 0, 8);
-            tableLayoutPanel1.Controls.Add(Leistunglbl, 0, 9);
+            tableLayoutPanel1.Controls.Add(Leistunglbl, 0, 8);
+            tableLayoutPanel1.Controls.Add(Hubraumlbl, 0, 9);
             tableLayoutPanel1.Controls.Add(Klasselbl, 0, 10);
             //Hier werden die Textboxen und ComboBoxen als nächstes auf ihre 
             //ursprüngliche Position gebracht
             tableLayoutPanel1.Controls.Add(comboBoxFahrzeugtyp, 1, 0);
-            tableLayoutPanel1.Controls.Add(textBox1, 1, 1);
-            tableLayoutPanel1.Controls.Add(textBox2, 1, 2);
+            tableLayoutPanel1.Controls.Add(HerstellerText, 1, 1);
+            tableLayoutPanel1.Controls.Add(ModellText, 1, 2);
             tableLayoutPanel1.Controls.Add(maskedkenn, 1, 3);
             tableLayoutPanel1.Controls.Add(Jahrcombo, 1, 4);
-            tableLayoutPanel1.Controls.Add(textBox3, 1, 5);
-            tableLayoutPanel1.Controls.Add(textBox4, 1, 6);
-            tableLayoutPanel1.Controls.Add(textBox5, 1, 7);
-            tableLayoutPanel1.Controls.Add(Hubbtn, 1, 8);
-            tableLayoutPanel1.Controls.Add(textBox8, 1, 9);
+            tableLayoutPanel1.Controls.Add(PreisText, 1, 5);
+            tableLayoutPanel1.Controls.Add(AchsenText, 1, 6);
+            tableLayoutPanel1.Controls.Add(ZuladungText, 1, 7);
+            tableLayoutPanel1.Controls.Add(LeistungText, 1, 8);
+            tableLayoutPanel1.Controls.Add(HubraumText, 1, 9);
             tableLayoutPanel1.Controls.Add(klassecombo, 1, 10);
-
-
+            tableLayoutPanel1.Controls.Remove(PkwMarkenCombo);
+            tableLayoutPanel1.Controls.Remove(LKWMarkenCombo);
+            tableLayoutPanel1.Controls.Remove(MotoMarkenCombo);
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
@@ -138,7 +139,7 @@ namespace MeinProjekt
         {
             char ch = e.KeyChar;
 
-            if(textBox2.Text.IndexOf(".") != -1)
+            if(ModellText.Text.IndexOf(".") != -1)
             {
                 e.Handled = true;
                 return;
@@ -154,7 +155,7 @@ namespace MeinProjekt
         {
             char ch = e.KeyChar;
 
-            if (textBox2.Text.IndexOf(".") != -1)
+            if (ModellText.Text.IndexOf(".") != -1)
             {
                 e.Handled = true;
                 return;
@@ -170,7 +171,7 @@ namespace MeinProjekt
         {
             char ch = e.KeyChar;
 
-            if (textBox2.Text.IndexOf(".") != -1)
+            if (ModellText.Text.IndexOf(".") != -1)
             {
                 e.Handled = true;
                 return;
@@ -186,7 +187,7 @@ namespace MeinProjekt
         {
             char ch = e.KeyChar;
 
-            if (textBox2.Text.IndexOf(".") != -1)
+            if (ModellText.Text.IndexOf(".") != -1)
             {
                 e.Handled = true;
                 return;
@@ -202,7 +203,7 @@ namespace MeinProjekt
         {
             char ch = e.KeyChar;
 
-            if (textBox2.Text.IndexOf(".") != -1)
+            if (ModellText.Text.IndexOf(".") != -1)
             {
                 e.Handled = true;
                 return;
@@ -218,7 +219,7 @@ namespace MeinProjekt
         {
             char ch = e.KeyChar;
 
-            if (textBox2.Text.IndexOf(".") != -1 )
+            if (ModellText.Text.IndexOf(".") != -1 )
             {
                 e.Handled = true;
                 return;
@@ -238,41 +239,41 @@ namespace MeinProjekt
 
                if (fahrzeug.FahrzeugTyp == "PKW")
                {
-                    ((PKWs)fahrzeug).Leistung = textBox8.Text;
-                    ((PKWs)fahrzeug).Hubraum = Hubbtn.Text;
+                    fahrzeug.FahrzeugTyp = "PKW";
+                    ((PKWs)fahrzeug).Leistung = LeistungText.Text;
+                    ((PKWs)fahrzeug).PHubraum = HubraumText.Text;
                     ((PKWs)fahrzeug).Schadstoffklasse = klassecombo.Text;
-
-                    fahrzeug.Hersteller = PkwMarkenCombo.Text;
-                    fahrzeug.Modell = textBox2.Text;
+                    ((PKWs)fahrzeug).PKWMarke = PkwMarkenCombo.Text;
+                    fahrzeug.Modell = ModellText.Text;
                     fahrzeug.Kennzeichen = maskedkenn.Text;
                     fahrzeug.Jahr_Der_Erstzulassung = Jahrcombo.Text;
-                    fahrzeug.Preis = textBox3.Text;
-                    fahrzeug.FahrzeugTyp = comboBoxFahrzeugtyp.Text;
+                    fahrzeug.Preis = PreisText.Text;
+                    
                }
                else if (fahrzeug.FahrzeugTyp == "LKW")
                {
+                    fahrzeug.FahrzeugTyp = "LKW";
                     fahrzeug = new LKWs();
-                    ((LKWs)fahrzeug).Anzahl_Der_Achsen = textBox4.Text;
-                    ((LKWs)fahrzeug).Zuladung = textBox5.Text;
-
-                    fahrzeug.Hersteller = LKWMarkenCombo.Text;
-                    fahrzeug.Modell = textBox2.Text;
+                    ((LKWs)fahrzeug).Anzahl_Der_Achsen = AchsenText.Text;
+                    ((LKWs)fahrzeug).Zuladung = ZuladungText.Text;
+                    ((LKWs)fahrzeug).LKWMarke = LKWMarkenCombo.Text;
+                    fahrzeug.Modell = ModellText.Text;
                     fahrzeug.Kennzeichen = maskedkenn.Text;
                     fahrzeug.Jahr_Der_Erstzulassung = Jahrcombo.Text;
-                    fahrzeug.Preis = textBox3.Text;
-                    fahrzeug.FahrzeugTyp = comboBoxFahrzeugtyp.Text;
+                    fahrzeug.Preis = PreisText.Text;
+                    
                }
                else if (fahrzeug.FahrzeugTyp == "Motorrad")
                {
+                    fahrzeug.FahrzeugTyp = "Motorrad";
                     fahrzeug = new Motorräder();
-                    ((Motorräder)fahrzeug).Hubraum = Hubbtn.Text;
-                    fahrzeug.Hersteller = MotoMarkenCombo.Text;
-
-                    fahrzeug.Modell = textBox2.Text;
+                    ((Motorräder)fahrzeug).Hubraum = HubraumText.Text;
+                    ((Motorräder)fahrzeug).MotoMarke = MotoMarkenCombo.Text;
+                    fahrzeug.Modell = ModellText.Text;
                     fahrzeug.Kennzeichen = maskedkenn.Text;
                     fahrzeug.Jahr_Der_Erstzulassung = Jahrcombo.Text;
-                    fahrzeug.Preis = textBox3.Text;
-                    fahrzeug.FahrzeugTyp = comboBoxFahrzeugtyp.Text;
+                    fahrzeug.Preis = PreisText.Text;
+
                }
 
 
@@ -305,7 +306,7 @@ namespace MeinProjekt
         }
         public string Modell
         {
-            get { return textBox2.Text; }
+            get { return ModellText.Text; }
         }
         public string Kennzeichen
         {
@@ -317,23 +318,23 @@ namespace MeinProjekt
         }
         public string Preis
         {
-            get { return textBox3.Text; }
+            get { return PreisText.Text; }
         }
         public string Anzahl_Der_Achsen
         {
-            get { return textBox4.Text; }
+            get { return AchsenText.Text; }
         }
         public string Zuladung
         {
-            get { return textBox5.Text; }
+            get { return ZuladungText.Text; }
         }
         public string Leistung
         {
-            get { return textBox8.Text; }
+            get { return LeistungText.Text; }
         }
         public string Hubraum
         {
-            get { return Hubbtn.Text; }
+            get { return HubraumText.Text; }
         }
         public string Schadstoffklasse
         {
@@ -347,27 +348,9 @@ namespace MeinProjekt
             set;
         }
 
-
-        private void SchuldenBtn_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if(comboBoxFahrzeugtyp.Text == "PKW")
-            {
-                
-                Ergebnis = Convert.ToDouble(Hubbtn.Text) + (99 / 100 * 10 * Convert.ToDouble(klassecombo.Text) + 1);
-                Schuldenbox.Text = Convert.ToString(Ergebnis);
-            }
-            else if (comboBoxFahrzeugtyp.Text == "LKW")
-            {
-                Ergebnis = Convert.ToDouble(textBox5.Text);
-                Schuldenbox.Text = Convert.ToString(Ergebnis);
-            }
-            else if (comboBoxFahrzeugtyp.Text == "Motorrad")
-            {
-                Ergebnis = Convert.ToDouble(Hubbtn.Text) + 99 / 100 * 20;
-                Schuldenbox.Text = Convert.ToString(Ergebnis);
-            }
-        }
 
-       
+        }
     }
 }
