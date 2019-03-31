@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>462</y>
+      <w>132</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>/AbstractClass: Fahrzeug/
+string Modell()
+string Kennzeichen()
+string Jahr_Der_Erstzulassung()
+string Preis()
+string FahrzeugTyp()
+virtual double Steuerschuld()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>360</y>
+      <w>126</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>SimpleClass:LKWs
+string Anzahl_Der_Achsen()
+string Zuladung()
+string LKWMark()
+ovveride double Steuerschuld()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>462</y>
+      <w>126</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>SimpleClass:PKWs
+string PHubraum()
+string Leistung()
+string Schadstoffklasse()
+string PKWMarke()
+ovveride double Steuerschuld()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>564</y>
+      <w>126</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>SimpleClass:Motorräder
+string Hubraum()
+string MotoMarke()
+ovveride double Steuerschuld()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>426</x>
+      <y>384</y>
+      <w>90</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>426</x>
+      <y>474</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>426</x>
+      <y>522</y>
+      <w>90</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>696</x>
+      <y>324</y>
+      <w>198</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes> Form1
+public List&lt;Fahrzeug&gt;
+double tmpSteuer
+public Form1
+Private Void Hinzufügen_Click(Hinzufügen)
+Private Void Löschen_Click()
+Private void Speichern()
+private void Laden()
+private void Fahrzeugliste_SelectedIndexChanged()
+private void Fahrzeugliste_MouseDoubleClick()
+private void Zurücksetzen()
+private Void GesSchuldbtn_Click()
+private void Suchenbtn_Click()
+private void TextLöschen()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>552</y>
+      <w>216</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>form2
+public Fahrzeug{get; set;}
+public form2
+private void comboFahrzeugTyp_SelectedIndexChane()
+private void Zurücksetzen()
+Speichern_Click
+private void Hubbtn_KeyPress()
+private void PreisText_KeyPress()
+ private void AchsenText_KeyPress()
+private void ZuladungText_KeyPress()
+  private void LeistungText_KeyPress()
+  private void NurWerte()
+  private void FahrzeugHinzufügen_FormClosing()
+  HilfeBtn</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>462</y>
+      <w>18</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>444</y>
+      <w>78</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>534</y>
+      <w>72</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>462</y>
+      <w>18</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>198</x>
+      <y>414</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Programm
+Main()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>198</x>
+      <y>486</y>
+      <w>60</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Verwaltung
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>552</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parkhauspool
+List&lt;Parkhaus&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1038</x>
+      <y>552</y>
+      <w>102</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>Parkhaus
+string Ort()
+int PLZ()
+string Straße()
+string Parkplatz_Typ()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>996</x>
+      <y>558</y>
+      <w>54</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1188</x>
+      <y>552</y>
+      <w>114</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Parkplätze
+bool Frei_Oder_Nicht()
+string Zuweisung()
+double Nummer()
+string Parkplatz_Typ()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1182</x>
+      <y>456</y>
+      <w>126</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Parkplatz_Typ
+string Parkplatz_Typ()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>522</x>
+      <y>318</y>
+      <w>84</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>FahrzeugPool
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1134</x>
+      <y>564</y>
+      <w>66</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1248</x>
+      <y>480</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

@@ -57,6 +57,7 @@
             this.PkwMarkenCombo = new System.Windows.Forms.ComboBox();
             this.LKWMarkenCombo = new System.Windows.Forms.ComboBox();
             this.MotoMarkenCombo = new System.Windows.Forms.ComboBox();
+            this.Hilfebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,14 +72,6 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.maskedkenn, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.klassecombo, 1, 10);
             this.tableLayoutPanel1.Controls.Add(this.Zuladunglbl, 0, 7);
@@ -105,27 +98,24 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(149, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 11;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.37681F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.62319F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(355, 513);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // maskedkenn
             // 
-            this.maskedkenn.Location = new System.Drawing.Point(176, 131);
+            this.maskedkenn.BackColor = System.Drawing.Color.Silver;
+            this.maskedkenn.Location = new System.Drawing.Point(176, 141);
             this.maskedkenn.Mask = "K-LL-0000";
             this.maskedkenn.Name = "maskedkenn";
             this.maskedkenn.Size = new System.Drawing.Size(121, 22);
@@ -133,12 +123,14 @@
             // 
             // klassecombo
             // 
+            this.klassecombo.BackColor = System.Drawing.Color.Gray;
+            this.klassecombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.klassecombo.FormattingEnabled = true;
             this.klassecombo.Items.AddRange(new object[] {
             "0",
             "1",
             "2"});
-            this.klassecombo.Location = new System.Drawing.Point(176, 448);
+            this.klassecombo.Location = new System.Drawing.Point(176, 463);
             this.klassecombo.Name = "klassecombo";
             this.klassecombo.Size = new System.Drawing.Size(121, 24);
             this.klassecombo.TabIndex = 11;
@@ -146,7 +138,7 @@
             // Zuladunglbl
             // 
             this.Zuladunglbl.AutoSize = true;
-            this.Zuladunglbl.Location = new System.Drawing.Point(3, 307);
+            this.Zuladunglbl.Location = new System.Drawing.Point(3, 322);
             this.Zuladunglbl.Name = "Zuladunglbl";
             this.Zuladunglbl.Size = new System.Drawing.Size(68, 17);
             this.Zuladunglbl.TabIndex = 8;
@@ -155,7 +147,7 @@
             // Achsenlbl
             // 
             this.Achsenlbl.AutoSize = true;
-            this.Achsenlbl.Location = new System.Drawing.Point(3, 262);
+            this.Achsenlbl.Location = new System.Drawing.Point(3, 276);
             this.Achsenlbl.Name = "Achsenlbl";
             this.Achsenlbl.Size = new System.Drawing.Size(55, 17);
             this.Achsenlbl.TabIndex = 7;
@@ -164,7 +156,7 @@
             // Preislbl
             // 
             this.Preislbl.AutoSize = true;
-            this.Preislbl.Location = new System.Drawing.Point(3, 216);
+            this.Preislbl.Location = new System.Drawing.Point(3, 230);
             this.Preislbl.Name = "Preislbl";
             this.Preislbl.Size = new System.Drawing.Size(40, 17);
             this.Preislbl.TabIndex = 6;
@@ -173,7 +165,7 @@
             // Jahrlbl
             // 
             this.Jahrlbl.AutoSize = true;
-            this.Jahrlbl.Location = new System.Drawing.Point(3, 171);
+            this.Jahrlbl.Location = new System.Drawing.Point(3, 184);
             this.Jahrlbl.Name = "Jahrlbl";
             this.Jahrlbl.Size = new System.Drawing.Size(36, 17);
             this.Jahrlbl.TabIndex = 5;
@@ -181,14 +173,18 @@
             // 
             // LeistungText
             // 
-            this.LeistungText.Location = new System.Drawing.Point(176, 354);
+            this.LeistungText.BackColor = System.Drawing.Color.Silver;
+            this.LeistungText.Location = new System.Drawing.Point(176, 371);
             this.LeistungText.Name = "LeistungText";
             this.LeistungText.Size = new System.Drawing.Size(121, 22);
             this.LeistungText.TabIndex = 10;
-            this.LeistungText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
+            this.LeistungText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LeistungText_KeyPress);
+            this.LeistungText.Leave += new System.EventHandler(this.LeistungText_Leave);
             // 
             // comboBoxFahrzeugtyp
             // 
+            this.comboBoxFahrzeugtyp.BackColor = System.Drawing.Color.Silver;
+            this.comboBoxFahrzeugtyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFahrzeugtyp.FormattingEnabled = true;
             this.comboBoxFahrzeugtyp.Items.AddRange(new object[] {
             "PKW",
@@ -212,7 +208,7 @@
             // Herstellerlbl
             // 
             this.Herstellerlbl.AutoSize = true;
-            this.Herstellerlbl.Location = new System.Drawing.Point(3, 35);
+            this.Herstellerlbl.Location = new System.Drawing.Point(3, 46);
             this.Herstellerlbl.Name = "Herstellerlbl";
             this.Herstellerlbl.Size = new System.Drawing.Size(69, 17);
             this.Herstellerlbl.TabIndex = 2;
@@ -221,7 +217,7 @@
             // Klasselbl
             // 
             this.Klasselbl.AutoSize = true;
-            this.Klasselbl.Location = new System.Drawing.Point(3, 445);
+            this.Klasselbl.Location = new System.Drawing.Point(3, 460);
             this.Klasselbl.Name = "Klasselbl";
             this.Klasselbl.Size = new System.Drawing.Size(115, 17);
             this.Klasselbl.TabIndex = 11;
@@ -230,7 +226,7 @@
             // Modelllbl
             // 
             this.Modelllbl.AutoSize = true;
-            this.Modelllbl.Location = new System.Drawing.Point(3, 76);
+            this.Modelllbl.Location = new System.Drawing.Point(3, 92);
             this.Modelllbl.Name = "Modelllbl";
             this.Modelllbl.Size = new System.Drawing.Size(49, 17);
             this.Modelllbl.TabIndex = 3;
@@ -239,7 +235,7 @@
             // Kennzeichenlbl
             // 
             this.Kennzeichenlbl.AutoSize = true;
-            this.Kennzeichenlbl.Location = new System.Drawing.Point(3, 128);
+            this.Kennzeichenlbl.Location = new System.Drawing.Point(3, 138);
             this.Kennzeichenlbl.Name = "Kennzeichenlbl";
             this.Kennzeichenlbl.Size = new System.Drawing.Size(90, 17);
             this.Kennzeichenlbl.TabIndex = 4;
@@ -247,38 +243,44 @@
             // 
             // HerstellerText
             // 
-            this.HerstellerText.Location = new System.Drawing.Point(176, 38);
+            this.HerstellerText.BackColor = System.Drawing.Color.Silver;
+            this.HerstellerText.Location = new System.Drawing.Point(176, 49);
             this.HerstellerText.Name = "HerstellerText";
             this.HerstellerText.Size = new System.Drawing.Size(121, 22);
             this.HerstellerText.TabIndex = 2;
-            this.HerstellerText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // ModellText
             // 
-            this.ModellText.Location = new System.Drawing.Point(176, 79);
+            this.ModellText.BackColor = System.Drawing.Color.Silver;
+            this.ModellText.Location = new System.Drawing.Point(176, 95);
             this.ModellText.Name = "ModellText";
-            this.ModellText.Size = new System.Drawing.Size(161, 22);
+            this.ModellText.Size = new System.Drawing.Size(121, 22);
             this.ModellText.TabIndex = 3;
-            this.ModellText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // PreisText
             // 
-            this.PreisText.Location = new System.Drawing.Point(176, 219);
+            this.PreisText.BackColor = System.Drawing.Color.Silver;
+            this.PreisText.Location = new System.Drawing.Point(176, 233);
             this.PreisText.Name = "PreisText";
             this.PreisText.Size = new System.Drawing.Size(121, 22);
             this.PreisText.TabIndex = 6;
-            this.PreisText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.PreisText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreisText_KeyPress);
+            this.PreisText.Leave += new System.EventHandler(this.PreisText_Leave);
             // 
             // AchsenText
             // 
-            this.AchsenText.Location = new System.Drawing.Point(176, 265);
+            this.AchsenText.BackColor = System.Drawing.Color.Silver;
+            this.AchsenText.Location = new System.Drawing.Point(176, 279);
             this.AchsenText.Name = "AchsenText";
             this.AchsenText.Size = new System.Drawing.Size(121, 22);
             this.AchsenText.TabIndex = 7;
-            this.AchsenText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            this.AchsenText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AchsenText_KeyPress);
+            this.AchsenText.Leave += new System.EventHandler(this.AchsenText_Leave);
             // 
             // Jahrcombo
             // 
+            this.Jahrcombo.BackColor = System.Drawing.Color.Silver;
+            this.Jahrcombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Jahrcombo.FormattingEnabled = true;
             this.Jahrcombo.Items.AddRange(new object[] {
             "1990",
@@ -311,7 +313,7 @@
             "2017",
             "2018",
             "2019"});
-            this.Jahrcombo.Location = new System.Drawing.Point(176, 174);
+            this.Jahrcombo.Location = new System.Drawing.Point(176, 187);
             this.Jahrcombo.Name = "Jahrcombo";
             this.Jahrcombo.Size = new System.Drawing.Size(121, 24);
             this.Jahrcombo.TabIndex = 5;
@@ -319,7 +321,7 @@
             // Hubraumlbl
             // 
             this.Hubraumlbl.AutoSize = true;
-            this.Hubraumlbl.Location = new System.Drawing.Point(3, 394);
+            this.Hubraumlbl.Location = new System.Drawing.Point(3, 414);
             this.Hubraumlbl.Name = "Hubraumlbl";
             this.Hubraumlbl.Size = new System.Drawing.Size(66, 17);
             this.Hubraumlbl.TabIndex = 10;
@@ -328,7 +330,7 @@
             // Leistunglbl
             // 
             this.Leistunglbl.AutoSize = true;
-            this.Leistunglbl.Location = new System.Drawing.Point(3, 351);
+            this.Leistunglbl.Location = new System.Drawing.Point(3, 368);
             this.Leistunglbl.Name = "Leistunglbl";
             this.Leistunglbl.Size = new System.Drawing.Size(62, 17);
             this.Leistunglbl.TabIndex = 9;
@@ -336,32 +338,40 @@
             // 
             // ZuladungText
             // 
-            this.ZuladungText.Location = new System.Drawing.Point(176, 310);
+            this.ZuladungText.BackColor = System.Drawing.Color.Silver;
+            this.ZuladungText.Location = new System.Drawing.Point(176, 325);
             this.ZuladungText.Name = "ZuladungText";
             this.ZuladungText.Size = new System.Drawing.Size(121, 22);
             this.ZuladungText.TabIndex = 8;
-            this.ZuladungText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
+            this.ZuladungText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ZuladungText_KeyPress);
+            this.ZuladungText.Leave += new System.EventHandler(this.ZuladungText_Leave);
             // 
             // HubraumText
             // 
-            this.HubraumText.Location = new System.Drawing.Point(176, 397);
+            this.HubraumText.BackColor = System.Drawing.Color.Silver;
+            this.HubraumText.Location = new System.Drawing.Point(176, 417);
             this.HubraumText.Name = "HubraumText";
             this.HubraumText.Size = new System.Drawing.Size(121, 22);
             this.HubraumText.TabIndex = 9;
             this.HubraumText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Hubbtn_KeyPress);
+            this.HubraumText.Leave += new System.EventHandler(this.HubraumText_Leave);
             // 
             // SaveBtn
             // 
+            this.SaveBtn.BackColor = System.Drawing.Color.Silver;
+            this.SaveBtn.ForeColor = System.Drawing.Color.Black;
             this.SaveBtn.Location = new System.Drawing.Point(616, 490);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(129, 35);
             this.SaveBtn.TabIndex = 1;
             this.SaveBtn.Text = "Save";
-            this.SaveBtn.UseVisualStyleBackColor = true;
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.Speichern_Click);
             // 
             // PkwMarkenCombo
             // 
+            this.PkwMarkenCombo.BackColor = System.Drawing.Color.Silver;
+            this.PkwMarkenCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PkwMarkenCombo.FormattingEnabled = true;
             this.PkwMarkenCombo.Items.AddRange(new object[] {
             "Achilles",
@@ -385,6 +395,8 @@
             // 
             // LKWMarkenCombo
             // 
+            this.LKWMarkenCombo.BackColor = System.Drawing.Color.Silver;
+            this.LKWMarkenCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LKWMarkenCombo.FormattingEnabled = true;
             this.LKWMarkenCombo.Items.AddRange(new object[] {
             "Albion",
@@ -408,6 +420,8 @@
             // 
             // MotoMarkenCombo
             // 
+            this.MotoMarkenCombo.BackColor = System.Drawing.Color.Silver;
+            this.MotoMarkenCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.MotoMarkenCombo.FormattingEnabled = true;
             this.MotoMarkenCombo.Items.AddRange(new object[] {
             "Harley-Davidson",
@@ -428,20 +442,32 @@
             this.MotoMarkenCombo.Name = "MotoMarkenCombo";
             this.MotoMarkenCombo.Size = new System.Drawing.Size(121, 24);
             this.MotoMarkenCombo.TabIndex = 4;
-            this.MotoMarkenCombo.SelectedIndexChanged += new System.EventHandler(this.MotoMarkenCombo_SelectedIndexChanged);
+            // 
+            // Hilfebtn
+            // 
+            this.Hilfebtn.BackColor = System.Drawing.Color.Silver;
+            this.Hilfebtn.Location = new System.Drawing.Point(510, 153);
+            this.Hilfebtn.Name = "Hilfebtn";
+            this.Hilfebtn.Size = new System.Drawing.Size(111, 24);
+            this.Hilfebtn.TabIndex = 5;
+            this.Hilfebtn.Text = "<-- hilfe hierzu";
+            this.Hilfebtn.UseVisualStyleBackColor = false;
+            this.Hilfebtn.Click += new System.EventHandler(this.Hilfebtn_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 556);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(802, 556);
+            this.Controls.Add(this.Hilfebtn);
             this.Controls.Add(this.MotoMarkenCombo);
             this.Controls.Add(this.LKWMarkenCombo);
             this.Controls.Add(this.PkwMarkenCombo);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form2";
-            this.Text = "AddCar";
+            this.Text = "Erstellen eines Fahrzeuges";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FahrzeugHinzufügen_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -481,5 +507,6 @@
         private System.Windows.Forms.ComboBox LKWMarkenCombo;
         private System.Windows.Forms.ComboBox MotoMarkenCombo;
         private System.Windows.Forms.MaskedTextBox maskedkenn;
+        private System.Windows.Forms.Button Hilfebtn;
     }
 }
